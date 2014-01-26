@@ -17,8 +17,31 @@
         <a href="javascript:reset_to();"><img id="try_again" class="tip" src="./images/tip01.png" ></a>
         <a href="#"><img id="update_info"  class="tip" src="./images/tip02.png" ></a>
         <script type="text/javascript" src="./js/jquery.min.js"></script>
-        <script type="text/javascript" src="./js/main.js?v=1"></script>
-        <script type="text/javascript" src="./js/c.js?v=1"></script>
+        <script  src="./js/main.js?v=1"></script>
+        <script type="text/javascript">
+        function clear() {
+		  sp.wScratchPad('clear');
+		  $("#try_again").show();
+		}
+		function reset_to() {
+		  $.get( "imageInfo.php", function( data ) {
+		  $("#try_again").hide();
+		  sp.wScratchPad('image', './images/'+ data.bottomImg);
+		  sp.wScratchPad('image2', './images/'+ data.topImg);
+		  sp.wScratchPad('reset');
+			}, "json" );
+		}
+		var sp = $("#wScratchPad").wScratchPad({
+			width           : 209,             
+			height          : 316, 
+			image           : './images/bottom.png',
+			image2           : './images/top.png',
+			scratchMove: function(e, percent) {
+				  if(percent > 40)
+				   clear();
+			}
+		});
+        </script>
         <div class="compain_detail" >
            亲爱的活动，我们要开 
            亲爱的活动，我们要开 
