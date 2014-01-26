@@ -1,0 +1,120 @@
+body {
+	margin:0px;
+}
+#pagewrap {
+	margin: 0px auto;
+}
+#content {
+	position: absolute;
+    width: 100%;
+}
+#canvas {
+	background-color:none;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+	position: absolute;
+	
+}
+.gua_area {
+    cursor: pointer;
+    height: 32.6%;
+    position: absolute;
+    top: 32%;
+    width: 44.3%;
+	left:7%;
+}
+/* for 980px or less */
+@media screen and (max-width: 980px) {
+     #canvas {
+		height:100%;
+	}
+}
+/* for 700px or less */
+@media screen and (max-width: 700px) {
+	#content {
+		width: auto;
+		float: none;
+	}
+     .compain_detail{
+		font-size:12px;
+	}
+     #canvas {
+		height:103%;
+	}
+}
+/* for 480px or less */
+@media screen and (max-width: 480px) {
+	.compain_detail{
+		font-size:12px;
+	}
+    #canvas {
+		height:103%;
+	}
+}
+
+#content {
+	position: absolute;
+}
+#sidebar {
+	background: #f0efef;
+}
+img{
+    max-width: 100%;
+	border: 0 none;
+    vertical-align: middle;
+	 width: 100%;
+	 text-align:center;
+}
+.gua_hand {
+    position: absolute;
+    right: 8%;
+    top: 35.8%;
+    width: 20.6%;
+}
+
+.compain_detail{
+    height: 20%;
+    position: absolute;
+    top: 54.7%;
+    width: 39%;
+	right:1%;
+    font-size:12px;
+	color:#FFF;
+}
+.detail{
+	cursor: pointer;
+    height:10%;
+    position: absolute;
+    top: 57.7%;
+    width: 18%;
+	right:1%;
+}
+.user{
+	cursor: pointer;
+	height:9%;
+    position: absolute;
+    top: 89.2%;
+    width: 32%;
+	left:12%;
+	
+}
+.win{
+	cursor: pointer;
+	height:9%;
+    position: absolute;
+    top: 89.2%;
+    width: 32%;
+	right:13.7%;
+	
+}
+.tip{
+	display:none;
+	cursor: pointer;
+	height:7%;
+    position: absolute;
+    top: 50%;
+    width: 40%;
+	left:10%;
+}
