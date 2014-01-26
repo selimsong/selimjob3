@@ -3,8 +3,7 @@ function clear() {
   $("#try_again").show();
 }
 function reset_to() {
-  $.get( "imageInfo.php", function( data ) {
-	   console.log(data.key);
+  $.get( "/imageInfo.php", function( data ) {
   $("#try_again").hide();
   sp.wScratchPad('image', './images/'+ data.bottomImg);
   sp.wScratchPad('image2', './images/'+ data.topImg);
