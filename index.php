@@ -19,9 +19,15 @@
         <script type="text/javascript" src="./js/jquery.min.js"></script>
         <script  src="./js/main.js?v=1"></script>
         <script type="text/javascript">
+		var type = 'lost';
         function clear() {
 		  sp.wScratchPad('clear');
-		  $("#try_again").show();
+		  console.log(type);
+		  if('lost' == type){
+		     $("#try_again").show();
+		  }else{
+		     $("#update_info").show();
+		  }
 		}
 		function reset_to() {
 		  $.get( "imageInfo.php", function( data ) {
@@ -29,6 +35,7 @@
 		  sp.wScratchPad('image', './images/'+ data.bottomImg);
 		  sp.wScratchPad('image2', './images/'+ data.topImg);
 		  sp.wScratchPad('reset');
+		  type = data.key;
 			}, "json" );
 		}
 		var sp = $("#wScratchPad").wScratchPad({
