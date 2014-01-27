@@ -15,16 +15,20 @@
 		<img  name="bg" src="./images/bg.jpg"  />
 		<div class="gua_area" id="wScratchPad" ></div>
         <a href="javascript:reset_to();"><img id="try_again" class="tip" src="./images/tip01.png" ></a>
+        <img id="bottom" class="tipinfo" src="./images/bottom_b.png" >
         <a href="#"><img id="update_info"  class="tip" src="./images/tip02.png" ></a>
         <script type="text/javascript" src="./js/jquery.min.js"></script>
         <script  src="./js/main.js?v=1"></script>
         <script type="text/javascript">
 		var type = 'lost';
         function clear() {
-		  sp.wScratchPad('clear');
-		  console.log(type);
+		  //sp.wScratchPad('clear');
 		  if('lost' == type){
+			 //sp.wScratchPad('image', './images/bottom_bg.png');
+			 //sp.css({backgroundImage: "url('./images/bottom_bg.png')"});
+			 $("#canvas").css({backgroundImage: "url('./images/bottom_bg.png')"});
 		     $("#try_again").show();
+			 $("#bottom").show();
 		  }else{
 		     $("#update_info").show();
 		  }
@@ -44,7 +48,7 @@
 			image           : './images/bottom.png',
 			image2           : './images/top.png',
 			scratchMove: function(e, percent) {
-				  if(percent > 60)
+				  if(percent > 30)
 				   clear();
 			}
 		});
