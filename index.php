@@ -47,7 +47,7 @@
 			image           : './images/bottom.png',
 			image2           : './images/top.png',
 			scratchUp: function(e, percent) {
-				  if(percent > 60)
+				  if(percent > 50)
 				   clear();
 			}
 		});
