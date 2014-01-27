@@ -14,9 +14,9 @@
 	<div id="content">
 		<img  name="bg" src="./images/bg.jpg"  />
 		<div class="gua_area" id="wScratchPad" ></div>
-        <img id="try_again" class="tip" src="./images/tip01.png" >
+        <a href="javascript:reset_to();"><img id="try_again" class="tip" src="./images/tip01.png" ></a>
         <img id="bg" class="tip" src="./images/bottom_b.png" >
-        <a href="javascript:reset_to();"><img id="bottom" class="tipinfo" src="./images/bottom_b.png" ></a>
+        <img id="bottom" class="tipinfo" src="./images/bottom_b.png" >
         <a href="#"><img id="update_info"  class="tip" src="./images/tip02.png" ></a>
         <script type="text/javascript" src="./js/jquery.min.js"></script>
         <script  src="./js/main.js?v=1"></script>
