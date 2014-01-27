@@ -284,7 +284,7 @@
 		scratchMove: function(e, $this)
 		{
 			//$this.ctx.lineTo(e.pageX, e.pageY, $this.settings.size);
-			$this.ctx.lineTo(e.pageX, e.pageY+20, $this.settings.size);
+			$this.ctx.lineTo(e.pageX, e.pageY+30, $this.settings.size);
 			$this.ctx.stroke();
 		},
 		
