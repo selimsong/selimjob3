@@ -10,6 +10,34 @@
 <link rel="Stylesheet" type="text/css" href="./css/main.css?v=1" />
 </head>
 <body>
+<script type="text/javascript">
+<?php
+include_once('config.php');
+$lost = array(1, 2, 3, 4);
+$win  = array(1, 2);
+shuffle($lost);
+$rate = rand(1,4);
+switch ($rate) {
+    case 1:
+        $img_array[] = array('bottomImg' => $win[0], 'key' => $win1_key);
+        break;
+    case 2:
+        $img_array[] = array('bottomImg' => $win[1], 'key' => $win2_key);
+        break;
+	default:
+       $img_array[] = array('bottomImg' => $lost[0], 'key' => $key);
+	   break;
+}
+$img_array[] = array('bottomImg' => $lost[1], 'key' => $key);
+$img_array[] = array('bottomImg' => $lost[2], 'key' => $key);
+echo 'var imgId  =new Array(3);';
+echo 'var imgKey =new Array(3);';
+foreach($img_array as $k => $value){
+   echo 'imgId['.$k.']="'.$value['bottomImg'].'";';
+   echo 'imgKey['.$k.']="'.$value['key'].'";';
+}
+?>
+</script>
 <div id="pagewrap">
 	<div id="content">
 		<img  name="bg" src="./images/bg.jpg"  />
