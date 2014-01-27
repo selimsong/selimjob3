@@ -14,8 +14,8 @@
 	<div id="content">
 		<img  name="bg" src="./images/bg.jpg"  />
 		<div class="gua_area" id="wScratchPad" ></div>
-        <a href="javascript:reset_to();"><img id="try_again" class="tip" src="./images/tip01.png" ></a>
-        <img id="bottom" class="tipinfo" src="./images/bottom_b.png" >
+        <img id="try_again" class="tip" src="./images/tip01.png" >
+        <a href="javascript:reset_to();"><img id="bottom" class="tipinfo" src="./images/bottom_b.png" ></a>
         <a href="#"><img id="update_info"  class="tip" src="./images/tip02.png" ></a>
         <script type="text/javascript" src="./js/jquery.min.js"></script>
         <script  src="./js/main.js?v=1"></script>
@@ -24,18 +24,17 @@
         function clear() {
 		  //sp.wScratchPad('clear');
 		  if('lost' == type){
-			 //sp.wScratchPad('image', './images/bottom_bg.png');
-			 //sp.css({backgroundImage: "url('./images/bottom_bg.png')"});
 			 $("#canvas").css({backgroundImage: "url('./images/bottom_bg.png')"});
-		     $("#try_again").show();
 			 $("#bottom").show();
+			  $("#try_again").show();
 		  }else{
 		     $("#update_info").show();
 		  }
 		}
 		function reset_to() {
-		  $.get( "imageInfo.php", function( data ) {
+		  $.get("imageInfo.php", function( data ) {
 		  $("#try_again").hide();
+		  $("#bottom").hide();
 		  sp.wScratchPad('image', './images/'+ data.bottomImg);
 		  sp.wScratchPad('image2', './images/'+ data.topImg);
 		  sp.wScratchPad('reset');
@@ -47,7 +46,7 @@
 			height          : 316, 
 			image           : './images/bottom.png',
 			image2           : './images/top.png',
-			scratchMove: function(e, percent) {
+			scratchUp: function(e, percent) {
 				  if(percent > 30)
 				   clear();
 			}

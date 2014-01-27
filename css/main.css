@@ -119,6 +119,7 @@ img{
 	left:10%;
 }
 .tipinfo{
+	cursor: pointer;
 	display:none;
 	height:32.6%;
     position: absolute;
