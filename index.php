@@ -15,6 +15,7 @@
 		<img  name="bg" src="./images/bg.jpg"  />
 		<div class="gua_area" id="wScratchPad" ></div>
         <img id="try_again" class="tip" src="./images/tip01.png" >
+        <img id="bg" class="tip" src="./images/bottom_b.png" >
         <a href="javascript:reset_to();"><img id="bottom" class="tipinfo" src="./images/bottom_b.png" ></a>
         <a href="#"><img id="update_info"  class="tip" src="./images/tip02.png" ></a>
         <script type="text/javascript" src="./js/jquery.min.js"></script>
@@ -24,8 +25,13 @@
         function clear() {
 		  //sp.wScratchPad('clear');
 		  if('lost' == type){
-			 $("#canvas").css({backgroundImage: "url('./images/bottom_bg.png')"});
-			 $("#bottom").show();
+			 var c=document.getElementById("canvas");
+			 var ctx=c.getContext("2d");
+			 var img=document.getElementById("bg");
+			 ctx.drawImage(img,0, 0);
+			 //$("#canvas").css({backgroundImage: "url('./images/bottom_b.png')"});
+			 //$("#canvas").css({background: "none"});
+			// $("#bottom").show();
 			  $("#try_again").show();
 		  }else{
 		     $("#update_info").show();
@@ -47,7 +53,7 @@
 			image           : './images/bottom.png',
 			image2           : './images/top.png',
 			scratchUp: function(e, percent) {
-				  if(percent > 50)
+				  if(percent > 47)
 				   clear();
 			}
 		});
