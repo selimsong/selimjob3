@@ -44,7 +44,7 @@
 			image           : './images/bottom.png',
 			image2           : './images/top.png',
 			scratchMove: function(e, percent) {
-				  if(percent > 40)
+				  if(percent > 60)
 				   clear();
 			}
 		});
