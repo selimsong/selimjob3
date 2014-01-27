@@ -58,11 +58,6 @@
 			}
 		});
         </script>
-        <div class="compain_detail" >
-           亲爱的活动，我们要开 
-           亲爱的活动，我们要开 
-           亲爱的活动，我们要开 
-        </div>
         <div class="detail" ><a href="http://www.baidu.com"><img  name="detail"  src="./images/detail.png" /></a></div>
         <div class="user" ><img  name="user"  src="./images/user.png" /></div>
         <div class="win" ><img  name="win"  src="./images/win.png" /></div>
