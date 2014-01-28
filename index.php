@@ -16,20 +16,20 @@ include_once('config.php');
 $lost = array(1, 2, 3, 4);
 $win  = array(1, 2);
 shuffle($lost);
-$rate = rand(1,4);
+$rate = rand(3,5);
 switch ($rate) {
     case 1:
-        $img_array[] = array('bottomImg' => $win[0], 'key' => $win1_key);
+        $img_array[] = array('bottomImg' => 'win'.$win[0].'.png', 'key' => $win1_key);
         break;
     case 2:
-        $img_array[] = array('bottomImg' => $win[1], 'key' => $win2_key);
+        $img_array[] = array('bottomImg' => 'win'.$win[1].'.png', 'key' => $win2_key);
         break;
 	default:
-       $img_array[] = array('bottomImg' => $lost[0], 'key' => $key);
+       $img_array[] = array('bottomImg' => 'lost'.$lost[0].'.png', 'key' => $key);
 	   break;
 }
-$img_array[] = array('bottomImg' => $lost[1], 'key' => $key);
-$img_array[] = array('bottomImg' => $lost[2], 'key' => $key);
+$img_array[] = array('bottomImg' => 'lost'.$lost[1].'.png', 'key' => $key);
+$img_array[] = array('bottomImg' => 'lost'.$lost[2].'.png', 'key' => $key);
 echo 'var imgId  =new Array(3);';
 echo 'var imgKey =new Array(3);';
 foreach($img_array as $k => $value){
@@ -43,39 +43,54 @@ foreach($img_array as $k => $value){
 		<img  name="bg" src="./images/bg.jpg"  />
 		<div class="gua_area" id="wScratchPad" ></div>
         <a href="javascript:reset_to();"><img id="try_again" class="tip" src="./images/tip01.png" ></a>
-        <img id="bg" class="tip" src="./img/lostt1.png" >
-        <img id="bottom" class="tipinfo" src="./img/lostt1.png" >
+        <img id="lost_tip" class="tip" src="" >
+        <img id="bottom" class="tipinfo" src="./img/tlost1.png" >
         <a href="#"><img id="update_info"  class="tip" src="./images/tip02.png" ></a>
         <script type="text/javascript" src="./js/jquery.min.js"></script>
         <script  src="./js/main.js?v=1"></script>
         <script type="text/javascript">
-		var type = 'lost';
+		var vType = 'run';
+		var count = 0;
         function clear() {
 		  //sp.wScratchPad('clear');
-		  if('lost' == type){
-			 var c=document.getElementById("canvas");
-			 var ctx=c.getContext("2d");
-			 var img=document.getElementById("bg");
-			 ctx.drawImage(img,0, 0);
-			  $("#try_again").show();
-		  }else{
+		  if('lost' == imgKey[count]){
+			if('run' == vType){
+				 var img=document.getElementById("lost_tip");
+				 img.src = './img/t'+ imgId[count];
+				 var c=document.getElementById("canvas");
+				 var ctx=c.getContext("2d");
+				 //console.log(imgId[count]);
+				 ctx.drawImage(img,0, 0);
+				  $("#try_again").show();
+				   ++count;
+				   vType = 'stop';
+			 }
+			 
+		  }else if('undefined' != typeof imgKey[count]  && 'lost' != imgKey[count]){
+			   //console.log(imgKey[count]);
 		     $("#update_info").show();
 		  }
+
 		}
 		function reset_to() {
-		  $.get("imageInfo.php", function( data ) {
+          vType = 'run';
 		  $("#try_again").hide();
-		  $("#bottom").hide();
-		  sp.wScratchPad('image', './images/'+ data.bottomImg);
-		  sp.wScratchPad('image2', './images/'+ data.topImg);
+		  $("#lost_tip").hide();
+		  var img=document.getElementById("lost_tip");
+		  img.src = './img/t'+ imgId[count];
+		  var c=document.getElementById("canvas");
+		  var ctx=c.getContext("2d");
+		  console.log(imgId[count]);
+		  ctx.drawImage(img,0, 0);
+		  sp.wScratchPad('image', './img/'+ imgId[count]);
+		  sp.wScratchPad('image2', './images/top.png');
 		  sp.wScratchPad('reset');
-		  type = data.key;
-			}, "json" );
+       
 		}
 		var sp = $("#wScratchPad").wScratchPad({
 			width           : 209,             
 			height          : 278, 
-			image           : './img/lost1.png',
+			image           : './img/' + imgId[0],
 			image2          : './images/top.png',
 			scratchUp: function(e, percent) {
 				  if(percent > 47)
