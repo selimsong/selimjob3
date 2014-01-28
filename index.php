@@ -45,6 +45,7 @@ foreach($img_array as $k => $value){
         <a href="javascript:reset_to();"><img id="try_again" class="tip" src="./images/tip01.png" ></a>
         <img id="lost_tip" class="tip" src="" >
         <img id="bottom" class="tipinfo" src="./img/tlost1.png" >
+        <img id="myhand" class="hand" src="./images/hand.png" >
         <a href="#"><img id="update_info"  class="tip" src="./images/tip02.png" ></a>
         <script type="text/javascript" src="./js/jquery.min.js?v=1"></script>
         <script  src="./js/main.js?v=4"></script>

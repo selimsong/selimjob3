@@ -118,6 +118,14 @@ img{
     width: 35%;
 	left:10%;
 }
+.hand{
+	cursor: pointer;
+	height:14%;
+    position: absolute;
+    top: 25.6%;
+    width: 19.7%;
+	left:1%;
+}
 .tipinfo{
 	cursor: pointer;
 	display:none;
