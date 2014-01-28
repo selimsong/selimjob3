@@ -27,13 +27,13 @@ function replyDoubleTextAndImg($toUserName, $fromUserName,){
 					<item>
 					<Title><![CDATA[大家好]]></Title> 
 					<Description><![CDATA[大家好2]]></Description>
-					<PicUrl><![CDATA[]]></PicUrl>
-					<Url><![CDATA[%s]]></Url>
+					<PicUrl><![CDATA[http://115.29.49.54/eventimg/sc.jpg]]></PicUrl>
+					<Url><![CDATA[http://115.29.49.54/scratch/]]></Url>
 					</item>
 					<item>
 					<Title><![CDATA[你好]]></Title> 
 					<Description><![CDATA[你好2]]></Description>
-					<PicUrl><![CDATA[]]></PicUrl>
+					<PicUrl><![CDATA[http://115.29.49.54/eventimg/zu.jpg]]></PicUrl>
 					</item>
 					</Articles>
                </xml>";			
