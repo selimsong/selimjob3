@@ -24,7 +24,7 @@
 <body>
 <div id="pagewrap">
 	<div id="content">
-		<img  name="bg" src="./images/center.jpg"  />
+		<img  name="bg" src="http://mei94.qiniudn.com/center.jpg"  />
 		<div class="form_box userinfo">
             <img src="images/form_bj.png" class="form_bj">
             <input type="text" value="" class="name name02 dat-UserName-value">
