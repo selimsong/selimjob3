@@ -9,7 +9,7 @@ $msgId        = $xml->MsgId;
 //subscribe event
 //if ($msgType == 'event') {
 	//if ($xml->Event == 'subscribe') {
-	     replyDoubleTextAndImg($toUserName, $fromUserName);
+	     replyDoubleTextAndImg($sendUserId, $developerId);
 	//}
 	//exit();
 //}
@@ -33,6 +33,7 @@ function replyDoubleTextAndImg($toUserName, $fromUserName){
 					<Title><![CDATA[你好]]></Title> 
 					<Description><![CDATA[你好2]]></Description>
 					<PicUrl><![CDATA[http://115.29.49.54/eventimg/zu.jpg]]></PicUrl>
+					<Url><![CDATA[http://115.29.49.54/scratch/]]></Url>
 					</item>
 					</Articles>
                </xml>";			
