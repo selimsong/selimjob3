@@ -5,6 +5,6 @@ mysql_select_db("scra", $con);
 
 mysql_query("INSERT INTO users (name, phone, email, address, wintype, ipaddress, createdate, createtime) 
 VALUES ('".$_POST['name']."', '".$_POST['phone']."', '".$_POST['email']."', '".$_POST['address']."', NULL,
-NULL, date(d), time())");
+NULL, ".date(d).", ".time().")") or die(mysql_error());
 
 mysql_close($con);
