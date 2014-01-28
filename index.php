@@ -93,7 +93,7 @@ foreach($img_array as $k => $value){
 			image           : './img/' + imgId[0],
 			image2          : './images/top.png',
 			scratchUp: function(e, percent) {
-				  if(percent > 47)
+				  if(percent > 55)
 				   clear();
 			}
 		});
