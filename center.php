@@ -33,7 +33,7 @@
             <input type="text" value="" class="address address02 dat-Address-value">
         </div>
         <img src="images/tijaio02.png" class="tijaio02">
-        
+        <a id="winline" name="winline"> </a>
       <div class="luck_name_box">
         <div class="list01">
                 <h3>艾薇儿签名潮T获得者：</h3>
