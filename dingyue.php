@@ -14,3 +14,30 @@ if ($msgType == 'event') {
 	}
 	exit();
 }
+
+function replyDoubleTextAndImg($toUserName, $fromUserName,){
+
+      $textTpl = "<xml>
+	                <ToUserName><![CDATA[%s]]></ToUserName>
+	                <FromUserName><![CDATA[%s]]></FromUserName>
+                    <CreateTime>%s</CreateTime>
+                    <MsgType><![CDATA[news]]></MsgType>
+					<ArticleCount>2</ArticleCount>
+                    <Articles>
+					<item>
+					<Title><![CDATA[大家好]]></Title> 
+					<Description><![CDATA[大家好2]]></Description>
+					<PicUrl><![CDATA[]]></PicUrl>
+					<Url><![CDATA[%s]]></Url>
+					</item>
+					<item>
+					<Title><![CDATA[你好]]></Title> 
+					<Description><![CDATA[你好2]]></Description>
+					<PicUrl><![CDATA[]]></PicUrl>
+					</item>
+					</Articles>
+               </xml>";			
+	$resultStr = sprintf($textTpl, $toUserName, $fromUserName, time(),  $title, $description, $picUrl, $url,$title, '我们飞啦', '', '');
+  }
+	echo $resultStr;
+}
