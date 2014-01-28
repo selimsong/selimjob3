@@ -9,17 +9,14 @@
 <![endif]-->
 
 <link rel="Stylesheet" type="text/css" href="./css/center.css?v=1" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="./js/jquery.min.js?v=1"></script>
 <script src="//rawgithub.com/aamirafridi/jQuery.Marquee/master/jquery.marquee.min.js?v=1.0" type="text/javascript"></script>
 <style type="text/css">
 		.marquee-vert {
-
 		  overflow: hidden;
 		  height:60px;
-
 		}
 	</style>
-
 </head>
 <body>
 <div id="pagewrap">
