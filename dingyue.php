@@ -9,7 +9,7 @@ $msgId        = $xml->MsgId;
 //subscribe event
 if ($msgType == 'event') {
 	if ($xml->Event == 'subscribe') {
-	     replyDoubleTextAndImg($toUserName, $fromUserName)
+	     replyDoubleTextAndImg($toUserName, $fromUserName);
 	}
 	exit();
 }
