@@ -98,7 +98,7 @@ foreach($img_array as $k => $value){
 			}
 		});
         </script>
-        <div class="detail" ><a href="http://www.baidu.com"><img  name="detail"  src="./images/detail.png" /></a></div>
+        <div class="detail" ><a href="detail.html"><img  name="detail"  src="./images/detail.png" /></a></div>
         <div class="user" ><img  name="user"  src="./images/user.png" /></div>
         <div class="win" ><img  name="win"  src="./images/win.png" /></div>
 	</div>
