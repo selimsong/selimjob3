@@ -1,0 +1,146 @@
+body {
+	margin:0px;
+}
+#pagewrap {
+	margin: 0px auto;
+}
+#content {
+	position: absolute;
+    width: 100%;
+}
+#canvas {
+	background-color:none;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+	position: absolute;
+	
+}
+.gua_area {
+    cursor: pointer;
+    height: 32.6%;
+    position: absolute;
+    top: 32%;
+    width: 44.3%;
+	left:7%;
+}
+/* for 980px or less */
+@media screen and (max-width: 980px) {
+     #canvas {
+		height:100%;
+	}
+}
+/* for 700px or less */
+@media screen and (max-width: 700px) {
+	#content {
+		width: auto;
+		float: none;
+	}
+     .compain_detail{
+		font-size:12px;
+	}
+     #canvas {
+		height:100%;
+	}
+}
+/* for 480px or less */
+@media screen and (max-width: 480px) {
+	.compain_detail{
+		font-size:12px;
+	}
+    #canvas {
+		height:100%;
+	}
+}
+
+#content {
+	position: absolute;
+}
+#sidebar {
+	background: #f0efef;
+}
+img{
+    max-width: 100%;
+	border: 0 none;
+    vertical-align: middle;
+	 width: 100%;
+	 text-align:center;
+}
+
+
+
+.detail{
+	cursor: pointer;
+    height:10%;
+    position: absolute;
+    top: 65.7%;
+    width: 18%;
+	right:1%;
+}
+
+.form_box {
+    left: 0;
+    position: absolute;
+    top: 12.4%;
+    width: 100%;
+}
+.name02 {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;
+    border-radius: 11px;
+    font-size: 12px;
+    font-style: italic;
+    height: 16.46%;
+    left: 24%;
+    position: absolute;
+    text-indent: 10px;
+    top: 3.8%;
+    width: 67.8%;
+}
+.tel02 {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;
+    border-radius: 11px;
+    font-size: 12px;
+    font-style: italic;
+    height: 16.46%;
+    left: 24%;
+    position: absolute;
+    text-indent: 10px;
+    top: 26.8%;
+    width: 67.8%;
+}
+.email02 {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;
+    border-radius: 11px;
+    font-size: 12px;
+    font-style: italic;
+    height: 16.46%;
+    left: 24%;
+    position: absolute;
+    text-indent: 10px;
+    top: 49.8%;
+    width: 62.8%;
+}
+.address02 {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;
+    border-radius: 11px;
+    font-size: 12px;
+    font-style: italic;
+    height: 16.46%;
+    left: 24%;
+    position: absolute;
+    text-indent: 10px;
+    top: 73.8%;
+    width: 67.8%;
+}
+.tijaio02 {
+    cursor: pointer;
+    left: 40%;
+    position: absolute;
+    top: 21.4%;
+    width: 32.3%;
+}

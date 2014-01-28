@@ -7,97 +7,23 @@
 <!--[if lt IE 9]>
 	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 <![endif]-->
-<link rel="Stylesheet" type="text/css" href="./css/main.css?v=1" />
+<link rel="Stylesheet" type="text/css" href="./css/center.css?v=1" />
 </head>
 <body>
-<script type="text/javascript">
-<?php
-include_once('config.php');
-$lost = array(1, 2, 3, 4);
-$win  = array(1, 2);
-shuffle($lost);
-$rate = rand(3,5);
-switch ($rate) {
-    case 1:
-        $img_array[] = array('bottomImg' => 'win'.$win[0].'.png', 'key' => $win1_key);
-        break;
-    case 2:
-        $img_array[] = array('bottomImg' => 'win'.$win[1].'.png', 'key' => $win2_key);
-        break;
-	default:
-       $img_array[] = array('bottomImg' => 'lost'.$lost[0].'.png', 'key' => $key);
-	   break;
-}
-$img_array[] = array('bottomImg' => 'lost'.$lost[1].'.png', 'key' => $key);
-$img_array[] = array('bottomImg' => 'lost'.$lost[2].'.png', 'key' => $key);
-echo 'var imgId  =new Array(3);';
-echo 'var imgKey =new Array(3);';
-foreach($img_array as $k => $value){
-   echo 'imgId['.$k.']="'.$value['bottomImg'].'";';
-   echo 'imgKey['.$k.']="'.$value['key'].'";';
-}
-?>
-</script>
 <div id="pagewrap">
 	<div id="content">
-		<img  name="bg" src="./images/bg.jpg"  />
-		<div class="gua_area" id="wScratchPad" ></div>
+		<img  name="bg" src="./images/center.jpg"  />
+		<div class="form_box userinfo">
+            <img src="images/form_bj.png" class="form_bj">
+            <input type="text" value="" class="name name02 dat-UserName-value">
+            <input type="tel" value="" class="tel tel02 dat-Phone-value">
+            <input type="text" value="" class="email email02 dat-Email-value">
+            <input type="text" value="" class="address address02 dat-Address-value">
+        </div>
+        <img src="images/tijaio02.png" class="tijaio02">
         <a href="javascript:reset_to();"><img id="try_again" class="tip" src="./images/tip01.png" ></a>
-        <img id="lost_tip" class="tip" src="" >
-        <img id="bottom" class="tipinfo" src="./img/tlost1.png" >
+        
         <a href="#"><img id="update_info"  class="tip" src="./images/tip02.png" ></a>
-        <script type="text/javascript" src="./js/jquery.min.js"></script>
-        <script  src="./js/main.js?v=1"></script>
-        <script type="text/javascript">
-		var vType = 'run';
-		var count = 0;
-        function clear() {
-		  //sp.wScratchPad('clear');
-		  if('lost' == imgKey[count]){
-			if('run' == vType){
-				 var img=document.getElementById("lost_tip");
-				 img.src = './img/t'+ imgId[count];
-				 var c=document.getElementById("canvas");
-				 var ctx=c.getContext("2d");
-				 //console.log(imgId[count]);
-				 ctx.drawImage(img,0, 0);
-				  $("#try_again").show();
-				   ++count;
-				   vType = 'stop';
-			 }
-			 
-		  }else if('undefined' != typeof imgKey[count]  && 'lost' != imgKey[count]){
-			   //console.log(imgKey[count]);
-		     $("#update_info").show();
-		  }
-
-		}
-		function reset_to() {
-          vType = 'run';
-		  $("#try_again").hide();
-		  $("#lost_tip").hide();
-		  var img=document.getElementById("lost_tip");
-		  img.src = './img/t'+ imgId[count];
-		  var c=document.getElementById("canvas");
-		  var ctx=c.getContext("2d");
-		  console.log(imgId[count]);
-		  ctx.drawImage(img,0, 0);
-		  sp.wScratchPad('image', './img/'+ imgId[count]);
-		  sp.wScratchPad('image2', './images/top.png');
-		  sp.wScratchPad('reset');
-       
-		}
-		var sp = $("#wScratchPad").wScratchPad({
-			width           : 209,             
-			height          : 278, 
-			image           : './img/' + imgId[0],
-			image2          : './images/top.png',
-			scratchUp: function(e, percent) {
-				  if(percent > 47)
-				   clear();
-			}
-		});
-        </script>
         <div class="detail" ><a href="http://www.baidu.com"><img  name="detail"  src="./images/detail.png" /></a></div>
         <div class="user" ><img  name="user"  src="./images/user.png" /></div>
         <div class="win" ><img  name="win"  src="./images/win.png" /></div>
