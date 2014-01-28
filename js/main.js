@@ -282,27 +282,7 @@
 		
 		scratchMove: function(e, $this)
 		{
-		 var ox = 0, oy = 0;
-        var first;
-	    var pageX, pageY, elem = this.canvas;
-
-        while (elem != null) {
-            ox += elem.offsetLeft;
-            oy += elem.offsetTop;
-            elem = elem.offsetParent;
-        }
-
-        if (e.hasOwnProperty('changedTouches')) {
-            first = e.changedTouches[0];
-            pageX = first.pageX;
-            pageY = first.pageY;
-        } else {
-            pageX = e.pageX;
-            pageY = e.pageY;
-        }
-			
-			//$this.ctx.lineTo(e.pageX, e.pageY, $this.settings.size);
-			$this.ctx.lineTo(pageX - ox, pageY - oy, $this.settings.size);
+			$this.ctx.lineTo(e.pageX, e.pageY, $this.settings.size);
 			$this.ctx.stroke();
 		},
 		
