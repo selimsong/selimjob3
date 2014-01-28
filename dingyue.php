@@ -37,6 +37,5 @@ function replyDoubleTextAndImg($toUserName, $fromUserName){
 					</Articles>
                </xml>";			
 	$resultStr = sprintf($textTpl, $toUserName, $fromUserName, time());
-  }
 	echo $resultStr;
 }
