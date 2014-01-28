@@ -7,12 +7,12 @@ $sendUserId   = $xml->FromUserName;
 $msgType      = $xml->MsgType;
 $msgId        = $xml->MsgId;
 //subscribe event
-if ($msgType == 'event') {
-	if ($xml->Event == 'subscribe') {
+//if ($msgType == 'event') {
+	//if ($xml->Event == 'subscribe') {
 	     replyDoubleTextAndImg($toUserName, $fromUserName);
-	}
-	exit();
-}
+	//}
+	//exit();
+//}
 
 function replyDoubleTextAndImg($toUserName, $fromUserName){
 
