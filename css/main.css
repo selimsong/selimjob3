@@ -85,10 +85,10 @@ img{
 }
 .detail{
 	cursor: pointer;
-    height:10%;
+    height:11%;
     position: absolute;
-    top: 65.7%;
-    width: 18%;
+    top: 65.5%;
+    width: 21%;
 	right:1%;
 }
 .user{
