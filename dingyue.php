@@ -1,5 +1,5 @@
 <?php
-include_once("validate.php");
+//include_once("validate.php");
 $post_data = $GLOBALS["HTTP_RAW_POST_DATA"];
 $xml       = simplexml_load_string($post_data);
 $developerId  = $xml->ToUserName;
@@ -37,5 +37,6 @@ function replyDoubleTextAndImg($toUserName, $fromUserName){
 					</Articles>
                </xml>";			
 	$resultStr = sprintf($textTpl, $toUserName, $fromUserName, time());
+  
 	echo $resultStr;
 }
