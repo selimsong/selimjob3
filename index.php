@@ -16,7 +16,7 @@ include_once('config.php');
 $lost = array(1, 2, 3, 4);
 $win  = array(1, 2);
 shuffle($lost);
-$rate = rand(1,4);
+$rate = rand(3,4);
 switch ($rate) {
     case 1:
         $img_array[] = array('bottomImg' => 'win'.$win[0].'.png', 'key' => $win1_key);
@@ -59,7 +59,7 @@ foreach($img_array as $k => $value){
 				 img.src = './img/t'+ imgId[count];
 				 var c=document.getElementById("canvas");
 				 var ctx=c.getContext("2d");
-				 //console.log(imgId[count]);
+				 console.log(imgId[count]);
 				 ctx.drawImage(img,0, 0);
 				  $("#try_again").show();
 				   ++count;
