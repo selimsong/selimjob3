@@ -82,7 +82,7 @@ img{
 .form_box {
     left: 0;
     position: absolute;
-    top: 12.4%;
+    top: 21%;
     width: 100%;
 }
 .name02 {
@@ -141,6 +141,29 @@ img{
     cursor: pointer;
     left: 40%;
     position: absolute;
-    top: 21.4%;
+    top: 36.4%;
     width: 32.3%;
+}
+
+.luck_name_box {
+    left: 0;
+    position: absolute;
+    top: 55.22%;
+    width: 100%;
+}
+.list01 {
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.list01 h3 {
+    color:#FFF;
+    font-size: 20px;
+    font-weight: 500;
+    left: 22%;
+    margin: 0;
+    position: relative;
 }
