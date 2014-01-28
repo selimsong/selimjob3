@@ -66,7 +66,7 @@
 		height			: 316,					// set height - best to match image height
 		image			: 'images/slide1.jpg',	// set image path
 		image2			: null,					// set overlay image path - if set color is not used
-		color			: '#336699',			// set scratch color - if image2 is not set uses color
+		color			: '',			// set scratch color - if image2 is not set uses color
 		overlay			: 'none',				// set the type of overlay effect 'none', 'lighter' - only used with color
 		size			: 20,					// set size of scratcher
 		realtimePercent : true,              	// Update scratch percent only on the mouseup/touchend (for better performances on mobile device)

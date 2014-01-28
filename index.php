@@ -54,7 +54,7 @@ foreach($img_array as $k => $value){
         function clear() {
 		  //sp.wScratchPad('clear');
 		  if('lost' == imgKey[count]){
-			if('run' == vType){
+			//if('run' == vType){
 				 var img=document.getElementById("lost_tip");
 				 img.src = './img/t'+ imgId[count];
 				 var c=document.getElementById("canvas");
@@ -64,7 +64,7 @@ foreach($img_array as $k => $value){
 				  $("#try_again").show();
 				   ++count;
 				   vType = 'stop';
-			 }
+			 //}
 			 
 		  }else if('undefined' != typeof imgKey[count]  && 'lost' != imgKey[count]){
 			   //console.log(imgKey[count]);
