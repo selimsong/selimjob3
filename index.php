@@ -47,7 +47,7 @@ foreach($img_array as $k => $value){
         <img id="bottom" class="tipinfo" src="./img/tlost1.png" >
         <a href="#"><img id="update_info"  class="tip" src="./images/tip02.png" ></a>
         <script type="text/javascript" src="./js/jquery.min.js"></script>
-        <script  src="./js/main.js?v=2"></script>
+        <script  src="./js/main.js?v=3"></script>
         <script type="text/javascript">
 		var vType = 'run';
 		var count = 0;
