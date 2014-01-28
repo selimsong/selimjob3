@@ -16,7 +16,7 @@ include_once('config.php');
 $lost = array(1, 2, 3, 4);
 $win  = array(1, 2);
 shuffle($lost);
-$rate = rand(3,5);
+$rate = rand(1,5);
 switch ($rate) {
     case 1:
         $img_array[] = array('bottomImg' => 'win'.$win[0].'.png', 'key' => $win1_key);
