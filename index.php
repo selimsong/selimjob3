@@ -95,7 +95,7 @@ foreach($img_array as $k => $value){
 		var sp = $("#wScratchPad").wScratchPad({
 			width           : 209,             
 			height          : 278, 
-			//image           : './img/' + imgId[0],
+			image           : './images/bottom_bg.png',
 			image2          : './images/top.png',
 			scratchUp: function(e, percent) {
 				  if(percent > 20)
