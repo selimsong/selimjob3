@@ -68,7 +68,7 @@
 		image2			: null,					// set overlay image path - if set color is not used
 		color			: '',			// set scratch color - if image2 is not set uses color
 		overlay			: 'none',				// set the type of overlay effect 'none', 'lighter' - only used with color
-		size			: 20,					// set size of scratcher
+		size			: 16,					// set size of scratcher
 		realtimePercent : true,              	// Update scratch percent only on the mouseup/touchend (for better performances on mobile device)
 		scratchDown		: null,					// scratchDown callback
 		scratchUp		: null,					// scratchUp callback
@@ -283,7 +283,7 @@
 		scratchMove: function(e, $this)
 		{
 			$this.ctx.lineTo(e.pageX, e.pageY, $this.settings.size);
-			$this.ctx.lineTo(e.pageX+20, e.pageY+20, $this.settings.size);
+			//$this.ctx.lineTo(e.pageX+20, e.pageY+20, $this.settings.size);
 			$this.ctx.stroke();
 		},
 		

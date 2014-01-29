@@ -43,7 +43,7 @@ foreach($img_array as $k => $value){
 		<img  name="bg" src="./images/bg.jpg"  />
 		<div class="gua_area" id="wScratchPad" ></div>
         <a href="javascript:reset_to();"><img id="try_again" class="tip" src="./images/tip01.png" ></a>
-        <img id="lost_tip" class="tip" src="" >
+        <img id="lost_tip" class="tip" src="./img/t<?php echo $img_array[0]['bottomImg'];  ?>" >
         <img id="bottom" class="tipinfo" src="./img/tlost1.png" >
         <img id="myhand" class="hand" src="./images/hand.png" >
         <a href="#"><img id="update_info"  class="tip" src="./images/tip02.png" ></a>
@@ -52,8 +52,8 @@ foreach($img_array as $k => $value){
         <script type="text/javascript">
 		var vType = 'run';
 		var count = 0;
-		 var img=document.getElementById("lost_tip");
-		 img.src = './img/t'+ imgId[count];
+		 //var img=document.getElementById("lost_tip");
+		 //img.src = './img/t'+ imgId[count];
         function clear() {
 		  //sp.wScratchPad('clear');
 		  if('lost' == imgKey[count]){
