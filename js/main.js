@@ -44,7 +44,7 @@
 			if(!test.getContext)
 			{
 				elem.html("Browser does not support HTML5 canvas, please upgrade to a more modern browser.");
-				alert(1);
+				
 				return false;	
 			}
 
@@ -263,7 +263,7 @@
 
 		scratchDown: function(e, $this)
 		{
-			alert(2);
+			alert($(window).width());
 			$this.ctx.globalCompositeOperation = 'destination-out';
 			$this.ctx.lineJoin = "round";
 			$this.ctx.lineCap = "round";
