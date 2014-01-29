@@ -280,7 +280,7 @@
 			   _y =  e.pageY;
 			}
 			
-			alert(_x + ': '+ _y + ': '+  $(window).width());
+			//alert(_x + ': '+ _y + ': '+  $(window).width());
 			//draw single dot in case of a click without a move
 			$this.ctx.beginPath();
 			//$this.ctx.arc(e.pageX+10, e.pageY+10, $this.settings.size, 0, Math.PI*3, true);
