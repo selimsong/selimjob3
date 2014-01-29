@@ -43,7 +43,7 @@
 			var test = document.createElement('canvas');
 			if(!test.getContext)
 			{
-				alert('Browser does not support HTML5 canvas');
+				 
 				elem.html("Browser does not support HTML5 canvas, please upgrade to a more modern browser.");
 				
 				return false;	
@@ -280,6 +280,7 @@
 			   _y =  e.pageY;
 			}
 			
+			alert(_x + ': '+ _y + ': '+  $(window).width());
 			//draw single dot in case of a click without a move
 			$this.ctx.beginPath();
 			//$this.ctx.arc(e.pageX+10, e.pageY+10, $this.settings.size, 0, Math.PI*3, true);

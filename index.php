@@ -41,9 +41,7 @@ function isCanvasSupported(){
   var elem = document.createElement('canvas');
   return !!(elem.getContext && elem.getContext('2d'));
 }
-if (!isCanvasSupported()){ 
-alert('Browser does not support HTML5 canvas')
-}
+
 </script>
 <div id="pagewrap">
 	<div id="content">
@@ -71,6 +69,7 @@ alert('Browser does not support HTML5 canvas')
 				// var ctx=c.getContext("2d");
 				 //console.log(imgId[count]);
 				// ctx.drawImage(img,0, 0);
+				
 				  $("#lost_tip").show();
 				  $("#try_again").show();
 				   ++count;
