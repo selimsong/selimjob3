@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html, body { margin:0; padding:0; }
+        #scratchpad { width:209px; height:278px; background:transparent url('bottom_bg.png') no-repeat 0 0; }
+    </style>
+</head>
+<body>
+    <div id="scratchpad">
+    
+    </div>
+    
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="wScratchPad.js"></script>
+    <script>
+        $("#scratchpad").wScratchPad({
+		width			: 209,					// set width - best to match image width
+		height			: 278,					// set height - best to match image height
+		// image			: 'images/slide1.jpg',	// set image path
+		image2			: 'top.png',					// set overlay image path - if set color is not used
+        });
+    </script>
+</body>
+</html>
