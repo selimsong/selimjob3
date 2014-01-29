@@ -240,7 +240,8 @@
 		{
 			e.pageX = Math.floor(e.pageX - $this.canvas_offset.left);
 			e.pageY = Math.floor(e.pageY - $this.canvas_offset.top);
-			
+			console.log($this.canvas_offset.left);
+			console.log($this.canvas_offset.top);
 			$this['scratch' + event](e, $this);
 			
 			if(this.settings.realtimePercent || event == "Up") {
