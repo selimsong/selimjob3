@@ -118,6 +118,15 @@ img{
     width: 35%;
 	left:10%;
 }
+.tipa{
+	display:none;
+	cursor: pointer;
+	height:32.6%;
+    position: absolute;
+    top: 32.1%;
+    width: 44.3%;
+	left:7%;
+}
 .hand{
 	cursor: pointer;
 	height:14%;

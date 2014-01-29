@@ -43,7 +43,7 @@ foreach($img_array as $k => $value){
 		<img  name="bg" src="./images/bg.jpg"  />
 		<div class="gua_area" id="wScratchPad" ></div>
         <a href="javascript:reset_to();"><img id="try_again" class="tip" src="./images/tip01.png" ></a>
-        <img id="lost_tip" class="tip" src="./img/t<?php echo $img_array[0]['bottomImg'];  ?>" >
+        <img id="lost_tip" class="tipa" src="./img/t<?php echo $img_array[0]['bottomImg'];  ?>" >
         <img id="bottom" class="tipinfo" src="./img/tlost1.png" >
         <img id="myhand" class="hand" src="./images/hand.png" >
         <a href="#"><img id="update_info"  class="tip" src="./images/tip02.png" ></a>
@@ -58,12 +58,13 @@ foreach($img_array as $k => $value){
 		  //sp.wScratchPad('clear');
 		  if('lost' == imgKey[count]){
 			//if('run' == vType){
-				 var img=document.getElementById("lost_tip");
+				 //var img=document.getElementById("lost_tip");
 				 //img.src = './img/t'+ imgId[count];
-				 var c=document.getElementById("canvas");
-				 var ctx=c.getContext("2d");
+				// var c=document.getElementById("canvas");
+				// var ctx=c.getContext("2d");
 				 //console.log(imgId[count]);
-				 ctx.drawImage(img,0, 0);
+				// ctx.drawImage(img,0, 0);
+				  $("#lost_tip").show();
 				  $("#try_again").show();
 				   ++count;
 				   vType = 'stop';
@@ -94,7 +95,7 @@ foreach($img_array as $k => $value){
 		var sp = $("#wScratchPad").wScratchPad({
 			width           : 209,             
 			height          : 278, 
-			image           : './img/' + imgId[0],
+			//image           : './img/' + imgId[0],
 			image2          : './images/top.png',
 			scratchUp: function(e, percent) {
 				  if(percent > 20)
