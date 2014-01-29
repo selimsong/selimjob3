@@ -37,6 +37,13 @@ foreach($img_array as $k => $value){
    echo 'imgKey['.$k.']="'.$value['key'].'";';
 }
 ?>
+function isCanvasSupported(){
+  var elem = document.createElement('canvas');
+  return !!(elem.getContext && elem.getContext('2d'));
+}
+if (!isCanvasSupported()){ 
+alert('Browser does not support HTML5 canvas')
+}
 </script>
 <div id="pagewrap">
 	<div id="content">
