@@ -53,7 +53,7 @@ function isCanvasSupported(){
         <img id="myhand" class="hand" src="./images/hand.png" >
         <a href="#"><img id="update_info"  class="tip" src="./images/tip02.png" ></a>
         <script type="text/javascript" src="./js/jquery.min.js?v=1"></script>
-        <script  src="./js/main.js?v=5"></script>
+        <script  src="./js/main.js?v=6"></script>
         <script type="text/javascript">
 		var vType = 'run';
 		var count = 0;
