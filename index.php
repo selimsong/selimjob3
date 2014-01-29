@@ -104,7 +104,7 @@ function isCanvasSupported(){
 			image           : './images/bottom_bg.png',
 			image2          : './images/top.png',
 			scratchUp: function(e, percent) {
-				  if(percent > 20)
+				  if(percent > 40)
 				   clear();
 			}
 		});
