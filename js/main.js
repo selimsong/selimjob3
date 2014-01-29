@@ -240,8 +240,6 @@
 		{
 			e.pageX = Math.floor(e.pageX - $this.canvas_offset.left);
 			e.pageY = Math.floor(e.pageY - $this.canvas_offset.top);
-			console.log($this.canvas_offset.left);
-			console.log($this.canvas_offset.top);
 			$this['scratch' + event](e, $this);
 			
 			if(this.settings.realtimePercent || event == "Up") {
@@ -270,20 +268,40 @@
 			$this.ctx.strokeStyle = $this.settings.color;
 			$this.ctx.lineWidth = $this.settings.size;
 			
+			if($(window).width() > 480 && $(window).width() < 700){
+			   _x =  e.pageX-$(window).width()*0.054;
+			   _y =  e.pageY-$(window).width()*0.05;
+			 
+			}else{
+			   _x =  e.pageX ;
+			   _y =  e.pageY;
+			}
+			
 			//draw single dot in case of a click without a move
 			$this.ctx.beginPath();
-			$this.ctx.arc(e.pageX+10, e.pageY+10, $this.settings.size, 0, Math.PI*3, true);
+			//$this.ctx.arc(e.pageX+10, e.pageY+10, $this.settings.size, 0, Math.PI*3, true);
+			$this.ctx.arc(_x, _y, $this.settings.size, 0, Math.PI*3, true);
 			$this.ctx.closePath();
 			$this.ctx.fill();
-			
+
 			//start the path for a drag
 			$this.ctx.beginPath();
-			$this.ctx.moveTo(e.pageX, e.pageY);
+			//$this.ctx.moveTo(e.pageX, e.pageY);
+			$this.ctx.moveTo(_x, _y);
+			
 		},
 		
 		scratchMove: function(e, $this)
 		{
-			$this.ctx.lineTo(e.pageX, e.pageY, $this.settings.size);
+		   if($(window).width() > 480 && $(window).width() < 700){
+			   _x =  e.pageX-$(window).width()*0.054;
+			   _y =  e.pageY-$(window).width()*0.05;
+			}else{
+			   _x =  e.pageX ;
+			   _y =  e.pageY;
+			}
+			$this.ctx.lineTo(_x, _y, $this.settings.size);
+			//$this.ctx.lineTo(e.pageX, e.pageY, $this.settings.size);
 			//$this.ctx.lineTo(e.pageX+20, e.pageY+20, $this.settings.size);
 			$this.ctx.stroke();
 		},

@@ -62,7 +62,7 @@ foreach($img_array as $k => $value){
 				 img.src = './img/t'+ imgId[count];
 				 var c=document.getElementById("canvas");
 				 var ctx=c.getContext("2d");
-				 console.log(imgId[count]);
+				 //console.log(imgId[count]);
 				 ctx.drawImage(img,0, 0);
 				  $("#try_again").show();
 				   ++count;
@@ -83,20 +83,21 @@ foreach($img_array as $k => $value){
 		  img.src = './img/t'+ imgId[count];
 		  var c=document.getElementById("canvas");
 		  var ctx=c.getContext("2d");
-		  console.log(imgId[count]);
+		  //console.log(imgId[count]);
 		  ctx.drawImage(img,0, 0);
 		  sp.wScratchPad('image', './img/'+ imgId[count]);
 		  sp.wScratchPad('image2', './images/top.png');
 		  sp.wScratchPad('reset');
        
 		}
+	   //console.log($(window).width());
 		var sp = $("#wScratchPad").wScratchPad({
 			width           : 209,             
 			height          : 278, 
 			image           : './img/' + imgId[0],
 			image2          : './images/top.png',
 			scratchUp: function(e, percent) {
-				  if(percent > 55)
+				  if(percent > 40)
 				   clear();
 			}
 		});
