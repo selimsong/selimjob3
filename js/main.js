@@ -43,6 +43,7 @@
 			var test = document.createElement('canvas');
 			if(!test.getContext)
 			{
+				alert('Browser does not support HTML5 canvas');
 				elem.html("Browser does not support HTML5 canvas, please upgrade to a more modern browser.");
 				
 				return false;	
