@@ -272,8 +272,8 @@
 			$this.ctx.lineWidth = $this.settings.size;
 			
 			if($(window).width() > 330 && $(window).width() < 700){
-			   _x =  e.pageX-$(window).width()*0.054;
-			   _y =  e.pageY-$(window).width()*0.05;
+			   _x =  e.pageX+10;
+			   _y =  e.pageY;
 			 
 			}else{
 			   _x =  e.pageX ;
@@ -298,8 +298,9 @@
 		scratchMove: function(e, $this)
 		{
 		   if($(window).width() > 330 && $(window).width() < 700){
-			   _x =  e.pageX-$(window).width()*0.054;
-			   _y =  e.pageY-$(window).width()*0.05;
+			   _x =  e.pageX+10;
+			   _y =  e.pageY;
+			  // _y =  e.pageY-$(window).width()*0.05;
 			}else{
 			   _x =  e.pageX ;
 			   _y =  e.pageY;
