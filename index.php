@@ -35,15 +35,14 @@
         <div class="btnwrapper" id="userwrapper"><a id="user" class="btn" href="#"><img src="user.png" alt="个人中心" /></a></div>
         <div id="scratchwrapper">
             <div id="scratchpad">
-                <img id="lost_tip" src="" />
+                <img src="lost1.png" />
             </div>
         </div>
      <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="wScratchPad.js"></script>
     <script>
     $(function(){
-		var img=document.getElementById("lost_tip");;
-		img.src = './img/lost1.png';
+		
         var scratchOverlay = $('#scratchpad img');
         $("#scratchpad").wScratchPad({
 		    width  : scratchOverlay.width(),
