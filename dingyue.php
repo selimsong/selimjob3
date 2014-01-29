@@ -24,14 +24,14 @@ function replyDoubleTextAndImg($toUserName, $fromUserName){
 					<ArticleCount>2</ArticleCount>
                     <Articles>
 					<item>
-					<Title><![CDATA[大家好]]></Title> 
-					<Description><![CDATA[大家好2描述]]></Description>
+					<Title><![CDATA[新年来袭，#刮起红运疯#]]></Title> 
+					<Description><![CDATA[新年来袭，#刮起红运疯#]]></Description>
 					<PicUrl><![CDATA[http://115.29.49.54/eventimg/sc.jpg]]></PicUrl>
 					<Url><![CDATA[http://115.29.49.54/scratch/]]></Url>
 					</item>
 					<item>
-					<Title><![CDATA[你好]]></Title> 
-					<Description><![CDATA[你好2]]></Description>
+					<Title><![CDATA[还有什么比收到【自制祝福贺卡】更让人感动的么？]]></Title> 
+					<Description><![CDATA[还有什么比收到【自制祝福贺卡】更让人感动的么？]]></Description>
 					<PicUrl><![CDATA[http://115.29.49.54/eventimg/zu.jpg]]></PicUrl>
 					<Url><![CDATA[http://115.29.49.54/scratch/]]></Url>
 					</item>
