@@ -35,7 +35,7 @@
         <div class="btnwrapper" id="userwrapper"><a id="user" class="btn" href="#"><img src="user.png" alt="个人中心" /></a></div>
         <div id="scratchwrapper">
             <div id="scratchpad">
-                <img src="lost1.png" />
+                
             </div>
         </div>
      <script type="text/javascript" src="jquery.min.js"></script>
@@ -43,10 +43,11 @@
     <script>
     $(function(){
 		
-        var scratchOverlay = $('#scratchpad img');
+        //var scratchOverlay = $('#scratchpad img');
         $("#scratchpad").wScratchPad({
-		    width  : scratchOverlay.width(),
-	    	height : scratchOverlay.height(),
+		    width			: 209,		
+		    height			: 278,
+			image			: './img/lost1.png',
 		    image2 : 'top.png'
         });
 
