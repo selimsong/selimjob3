@@ -59,7 +59,7 @@ foreach($img_array as $k => $value){
 		  if('lost' == imgKey[count]){
 			//if('run' == vType){
 				 var img=document.getElementById("lost_tip");
-				 img.src = './img/t'+ imgId[count];
+				 //img.src = './img/t'+ imgId[count];
 				 var c=document.getElementById("canvas");
 				 var ctx=c.getContext("2d");
 				 //console.log(imgId[count]);
@@ -97,7 +97,7 @@ foreach($img_array as $k => $value){
 			image           : './img/' + imgId[0],
 			image2          : './images/top.png',
 			scratchUp: function(e, percent) {
-				  if(percent > 30)
+				  if(percent > 20)
 				   clear();
 			}
 		});
