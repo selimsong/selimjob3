@@ -1,118 +1,62 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>刮奖</title>
-<!--[if lt IE 9]>
-	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-<![endif]-->
-<link rel="Stylesheet" type="text/css" href="./css/main.css?v=1" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <style>
+        html, body { margin:0; padding:0; }
+        img { margin:0; }
+        #container { position:relative; width:100%; }
+        #scratchwrapper { position:absolute; top:0; left:0; width:72%; }
+        #scratchpad { position:relative; margin:97.8% 0 0 11%; width:60%; }
+        #scratchpad img { position:absolute; width:100%; }
+        .btnwrapper { position:absolute; top:0; left:0; }
+        #detailwrapper { width:100%; }
+        #userwrapper { width:40%; }
+        #winwrapper { width:76%; }
+        .btnwrapper a { display:block; }
+        .btnwrapper a img { width:100%; }
+        #detail { margin:131% 0 0 76%; width:22%; }
+        #user { margin:468% 0 0 40%; width:70%; }
+        #win { margin:246% 0 0 72%; width:40%; }
+        
+        #handwrapper { position:absolute; top:0; left:0; width:12%; }
+        #handwrapper img { margin:520% 0 0 10%; width:120%; }
+        #afterscratchwrapper { width:40%; display:none; }
+        #afterscratch { margin:270% 0 0 35%; width:80%; }
+    </style>
 </head>
 <body>
-<script type="text/javascript">
-<?php
-include_once('config.php');
-$lost = array(1, 2, 3, 4);
-$win  = array(1, 2);
-shuffle($lost);
-$rate = rand(3,4);
-switch ($rate) {
-    case 1:
-        $img_array[] = array('bottomImg' => 'win'.$win[0].'.png', 'key' => $win1_key);
-        break;
-    case 2:
-        $img_array[] = array('bottomImg' => 'win'.$win[1].'.png', 'key' => $win2_key);
-        break;
-	default:
-       $img_array[] = array('bottomImg' => 'lost'.$lost[0].'.png', 'key' => $key);
-	   break;
-}
-$img_array[] = array('bottomImg' => 'lost'.$lost[1].'.png', 'key' => $key);
-$img_array[] = array('bottomImg' => 'lost'.$lost[2].'.png', 'key' => $key);
-echo 'var imgId  =new Array(3);';
-echo 'var imgKey =new Array(3);';
-foreach($img_array as $k => $value){
-   echo 'imgId['.$k.']="'.$value['bottomImg'].'";';
-   echo 'imgKey['.$k.']="'.$value['key'].'";';
-}
-?>
-function isCanvasSupported(){
-  var elem = document.createElement('canvas');
-  return !!(elem.getContext && elem.getContext('2d'));
-}
+    <div id="container">
+        <img style="width:100%;" src="bg.jpg" />
+        
+        <div class="btnwrapper" id="detailwrapper"><a id="detail" class="btn" href="#"><img src="detail.png" alt="更多详情" /></a></div>
+        <div class="btnwrapper" id="winwrapper"><a id="win" class="btn" href="#"><img src="win.png" alt="中奖名单" /></a></div>
+        <div class="btnwrapper" id="userwrapper"><a id="user" class="btn" href="#"><img src="user.png" alt="个人中心" /></a></div>
+        <div id="scratchwrapper">
+            <div id="scratchpad">
+                <img src="lost1.png" />
+            </div>
+        </div>
+     <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="wScratchPad.js"></script>
+    <script>
+    $(function(){
+        var scratchOverlay = $('#scratchpad img');
+        $("#scratchpad").wScratchPad({
+		    width  : scratchOverlay.width(),
+	    	height : scratchOverlay.height(),
+		    image2 : 'top.png'
+        });
+    });
+    </script>
+        <div class="btnwrapper" id="afterscratchwrapper">
+            <!-- 再刮一次或者完善个人资料 -->
+            <a id="afterscratch" class="btn" href="#"><img src="tip01.png" alt="再刮一次" /></a>
+        </div>
+        <div id="handwrapper"><img src="hand.png" /></div>
+    </div>
+    
 
-</script>
-<div id="pagewrap">
-	<div id="content">
-		<img  name="bg" src="./images/bg.jpg"  />
-		<div class="gua_area" id="wScratchPad" ></div>
-        <a href="javascript:reset_to();"><img id="try_again" class="tip" src="./images/tip01.png" ></a>
-        <img id="lost_tip" class="tipa" src="./img/t<?php echo $img_array[0]['bottomImg'];  ?>" >
-        <img id="bottom" class="tipinfo" src="./img/tlost1.png" >
-        <img id="myhand" class="hand" src="./images/hand.png" >
-        <a href="#"><img id="update_info"  class="tip" src="./images/tip02.png" ></a>
-        <script type="text/javascript" src="jquery.min.js?v=1"></script>
-        <script  src="./js/wScratchPad.js?v=6"></script>
-        <script type="text/javascript">
-		var vType = 'run';
-		var count = 0;
-		 //var img=document.getElementById("lost_tip");
-		 //img.src = './img/t'+ imgId[count];
-        function clear() {
-		  //sp.wScratchPad('clear');
-		  if('lost' == imgKey[count]){
-			//if('run' == vType){
-				 //var img=document.getElementById("lost_tip");
-				 //img.src = './img/t'+ imgId[count];
-				// var c=document.getElementById("canvas");
-				// var ctx=c.getContext("2d");
-				 //console.log(imgId[count]);
-				// ctx.drawImage(img,0, 0);
-				
-				  $("#lost_tip").show();
-				  $("#try_again").show();
-				   ++count;
-				   vType = 'stop';
-			 //}
-			 
-		  }else if('undefined' != typeof imgKey[count]  && 'lost' != imgKey[count]){
-			   //console.log(imgKey[count]);
-		     $("#update_info").show();
-		  }
-
-		}
-		function reset_to() {
-          vType = 'run';
-		  $("#try_again").hide();
-		  $("#lost_tip").hide();
-		  var img=document.getElementById("lost_tip");
-		  img.src = './img/t'+ imgId[count];
-		  var c=document.getElementById("canvas");
-		  var ctx=c.getContext("2d");
-		  //console.log(imgId[count]);
-		  ctx.drawImage(img,0, 0);
-		  sp.wScratchPad('image', './img/'+ imgId[count]);
-		  sp.wScratchPad('image2', './images/top.png');
-		  sp.wScratchPad('reset');
-       
-		}
-	   //console.log($(window).width());
-		var sp = $("#wScratchPad").wScratchPad({
-			width           : 209,             
-			height          : 278, 
-			image           : './images/bottom_bg.png',
-			image2          : './images/top.png',
-			scratchUp: function(e, percent) {
-				  if(percent > 40)
-				   clear();
-			}
-		});
-        </script>
-        <div class="detail" ><a href="detail.html"><img  name="detail"  src="./images/detail.png" /></a></div>
-        <div class="user" ><a href="center.php"><img  name="user"  src="./images/user.png" /></a></div>
-        <div class="win" ><a href="center.php#winline"><img  name="win"  src="./images/win.png" /></a></div>
-	</div>
-</div>
 </body>
 </html>
