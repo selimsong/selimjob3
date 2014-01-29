@@ -263,14 +263,14 @@
 
 		scratchDown: function(e, $this)
 		{
-			alert($(window).width());
+			//alert($(window).width());
 			$this.ctx.globalCompositeOperation = 'destination-out';
 			$this.ctx.lineJoin = "round";
 			$this.ctx.lineCap = "round";
 			$this.ctx.strokeStyle = $this.settings.color;
 			$this.ctx.lineWidth = $this.settings.size;
 			
-			if($(window).width() > 480 && $(window).width() < 700){
+			if($(window).width() > 330 && $(window).width() < 700){
 			   _x =  e.pageX-$(window).width()*0.054;
 			   _y =  e.pageY-$(window).width()*0.05;
 			 
