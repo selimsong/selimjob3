@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html, body { margin:0; padding:0; }
+        #container { position:relative; width:100%; }
+        #scratchwrapper { position:absolute; top:0; left:0; width:72%; }
+        #scratchpad { position:relative; margin:97.8% 0 0 11%; width:60%; /*background:transparent url('bottom_bg.png') no-repeat 0 0;*/}
+        #scratchpad img { position:absolute; width:100%; visibility:hidden; }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img style="width:100%;" src="bg.jpg" />
+        <div id="scratchwrapper">
+            <div id="scratchpad">
+                <img src="top.png" />
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="wScratchPad.js"></script>
+    <script>
+    $(function(){
+        var scratchOverlay = $('#scratchpad img');
+        $("#scratchpad").wScratchPad({
+		    width  : scratchOverlay.width(),
+	    	height : scratchOverlay.height(),
+		    image2 : scratchOverlay.attr('src')
+        });
+    });
+    </script>
+</body>
+</html>

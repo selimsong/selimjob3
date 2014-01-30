@@ -29,7 +29,7 @@
 <script type="text/javascript">
 <?php
 include_once('config.php');
-$lost = array(1, 2, 3, 4);
+$lost = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 $win  = array(1, 2);
 shuffle($lost);
 $rate = rand(3,4);
@@ -44,6 +44,7 @@ switch ($rate) {
        $img_array[] = array('bottomImg' => 'lost'.$lost[0].'.png', 'key' => $key);
 	   break;
 }
+
 $img_array[] = array('bottomImg' => 'lost'.$lost[1].'.png', 'key' => $key);
 $img_array[] = array('bottomImg' => 'lost'.$lost[2].'.png', 'key' => $key);
 echo 'var imgId  =new Array(3);';
