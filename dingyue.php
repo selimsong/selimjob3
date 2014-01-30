@@ -25,7 +25,7 @@ function replyDoubleTextAndImg($toUserName, $fromUserName){
                     <Articles>
 					<item>
 					<Title><![CDATA[新年来袭，#刮起红运疯#]]></Title> 
-					<Description><![CDATA[新年来袭，#刮起红运疯#]]></Description>
+					<Description><![CDATA[新年来袭，#刮起红运疯#！输入【刮】即刻获取刮刮卡！]]></Description>
 					<PicUrl><![CDATA[http://115.29.49.54/eventimg/sc.jpg]]></PicUrl>
 					<Url><![CDATA[http://115.29.49.54/scratch/]]></Url>
 					</item>
