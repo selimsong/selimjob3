@@ -9,10 +9,30 @@ $msgId        = $xml->MsgId;
 //subscribe event
 //if ($msgType == 'event') {
 	//if ($xml->Event == 'subscribe') {
-	     replyDoubleTextAndImg($sendUserId, $developerId);
+	     //replyDoubleTextAndImg($sendUserId, $developerId);
+		 replyText($sendUserId, $developerId);
 	//}
 	//exit();
 //}
+
+
+
+function replyText($toUserName, $fromUserName){
+
+      $textTpl = "<xml>
+					<ToUserName><![CDATA[%s]]></ToUserName>
+					<FromUserName><![CDATA[%s]]></FromUserName>
+					<CreateTime>%s</CreateTime>
+					<MsgType><![CDATA[text]]></MsgType>
+					<Content><![CDATA[%s]]></Content>
+					</Articles>
+               </xml>";			
+	$description = '<a href="http://115.29.49.54/scratch/index.php?uid='.$toUserName.'">点击链接即刻开始!</a>';
+	$resultStr = sprintf($textTpl, $toUserName, $fromUserName, time(), $description);
+  
+	echo $resultStr;
+}
+
 
 function replyDoubleTextAndImg($toUserName, $fromUserName){
 
