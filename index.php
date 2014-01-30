@@ -26,16 +26,44 @@
         #afterscratch { margin:270% 0 0 35%; width:80%; }
     </style>
 </head>
+<script type="text/javascript">
+<?php
+include_once('config.php');
+$lost = array(1, 2, 3, 4);
+$win  = array(1, 2);
+shuffle($lost);
+$rate = rand(3,4);
+switch ($rate) {
+    case 1:
+        $img_array[] = array('bottomImg' => 'win'.$win[0].'.png', 'key' => $win1_key);
+        break;
+    case 2:
+        $img_array[] = array('bottomImg' => 'win'.$win[1].'.png', 'key' => $win2_key);
+        break;
+	default:
+       $img_array[] = array('bottomImg' => 'lost'.$lost[0].'.png', 'key' => $key);
+	   break;
+}
+$img_array[] = array('bottomImg' => 'lost'.$lost[1].'.png', 'key' => $key);
+$img_array[] = array('bottomImg' => 'lost'.$lost[2].'.png', 'key' => $key);
+echo 'var imgId  =new Array(3);';
+echo 'var imgKey =new Array(3);';
+foreach($img_array as $k => $value){
+   echo 'imgId['.$k.']="'.$value['bottomImg'].'";';
+   echo 'imgKey['.$k.']="'.$value['key'].'";';
+}
+?>
+</script>
 <body>
     <div id="container">
-        <img style="width:100%;" src="bg.jpg" />
+        <img style="width:100%;" src="./images/bg.jpg" />
         
         <div class="btnwrapper" id="detailwrapper"><a id="detail" class="btn" href="#"><img src="detail.png" alt="更多详情" /></a></div>
         <div class="btnwrapper" id="winwrapper"><a id="win" class="btn" href="#"><img src="win.png" alt="中奖名单" /></a></div>
         <div class="btnwrapper" id="userwrapper"><a id="user" class="btn" href="#"><img src="user.png" alt="个人中心" /></a></div>
         <div id="scratchwrapper">
             <div id="scratchpad">
-                <img style="visibility:hidden;" src="lost1.png" />
+                <img style="visibility:hidden;" src="./img/<?php echo $img_array[0]['bottomImg'];  ?>" />
             </div>
         </div>
         
@@ -50,6 +78,8 @@
     <script type="text/javascript" src="wScratchPad.js"></script>
     <script>
     $(function(){
+		var vType = 'run';
+		var count = 0;
         var scratchOverlay = $('#scratchpad img');
         var sp = $("#scratchpad").wScratchPad({
 		    width  : scratchOverlay.width(),
@@ -59,15 +89,21 @@
 		    realtimePercent: true,
             scratchMove: function(e, percent) {
                 if (percent > 40) {
-                    this.clear();
-                    $('#afterscratch').show();
+			        if('lost' == imgKey[count]){  
+                        this.clear();
+                        $('#afterscratch').show();
+					}else{
+					
+					}
+					
                 }
             },
         });
         
         $('#afterscratch').click(function(e){
+			++count;	
 			$(this).hide();
-            sp.wScratchPad('image', 'lost2.png');
+            sp.wScratchPad('image', './img/'+ imgId[count]);
             sp.wScratchPad('reset');
             return false;
         });
