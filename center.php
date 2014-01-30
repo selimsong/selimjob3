@@ -17,6 +17,13 @@
 		}
 	</style>
 </head>
+<?php
+session_start();
+$k = $_SESSION['win_key'];
+if(empty($k)){
+$k = 2;
+}
+?>
 <body>
 <div id="pagewrap">
 	<div id="content">
@@ -103,7 +110,7 @@
         
 <script>
 
-
+var key = '<?php  echo $k; ?>';
 $(".tijaio02").click(function () {
    if('' == $(".name").val()){
 	   alert("请输入您的姓名");
@@ -126,7 +133,7 @@ $(".tijaio02").click(function () {
 	   return false;
 	}
    
-   $.post( "data.php", { name: $(".name").val(), phone: $(".tel").val(), email: $(".email").val(), address: $(".address").val() })
+   $.post( "data.php", { name: $(".name").val(), phone: $(".tel").val(), email: $(".email").val(), address: $(".address").val(), wkey: key })
      .done(function( data ) {
            alert("提交信息成功！");
    });

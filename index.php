@@ -30,21 +30,26 @@
     <script type="text/javascript">
 <?php
 include_once('config.php');
+session_start();
 $lost = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 $win  = array(1, 2);
 shuffle($lost);
 $rate = rand(1,4);
+$win_key = 1;
 switch ($rate) {
     case 1:
         $img_array[] = array('bottomImg' => 'win'.$win[0].'.png', 'key' => $win1_key);
+		$win_key = $win1_key;
         break;
     case 2:
         $img_array[] = array('bottomImg' => 'win'.$win[1].'.png', 'key' => $win2_key);
+		$win_key = $win2_key;
         break;
 	default:
        $img_array[] = array('bottomImg' => 'lost'.$lost[0].'.png', 'key' => $key);
 	   break;
 }
+$_SESSION['win_key']=$win_key;
 for($i=1; $i<=4; $i++){
 	   $img_array[$i] = array('bottomImg' => 'lost'.$lost[$i].'.png', 'key' => $key);
 	
@@ -82,7 +87,7 @@ foreach($img_array as $k => $value){
         <div class="btnwrapper" id="afterscratchwrapper">
             <!-- 再刮一次或者完善个人资料 -->
             <a id="afterscratch" class="btn" style="display:none;z-index:10;" data-role="none" rel="external" href="#"><img id="tip01" src="tip01.png" alt="再刮一次" /></a>
-            <a id="afterwin" class="btn" style="display:none;z-index:10;" data-role="none" rel="external"  href="center.php"><img src="tip02.png" alt="完善个人资料" /></a>
+            <a id="afterwin" class="btn" style="display:none;z-index:10;" data-role="none" rel="external"  href="center.php?type="<?php echo $win_key; ?>><img src="tip02.png" alt="完善个人资料" /></a>
         </div>
         <div id="handwrapper"><img src="hand.png" /></div>
     </div>
