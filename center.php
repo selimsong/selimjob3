@@ -61,11 +61,11 @@ $k = 2;
                 <h3>艾薇儿潮酷水杯获得者：</h3>
                   <div style="overflow:hidden;min-height:160px;position: relative;   " id="demo">
                     <div style="position: absolute;left:0%;height: 160px;" class="shuibei" id="demo1 ">
-                            <p class="list_jipiao"><em class="praiseNo01 dat-UserName">徐*</em>
-                                <em  class="praiseNo02 dat-Phone">138***37676</em>
+                            <p class="list_jipiao"><em class="praiseNo01 dat-UserName">李*</em>
+                                <em  class="praiseNo02 dat-Phone">135***36456</em>
                                </p>
                                 <p class="list_jipiao"><em class="praiseNo01 dat-UserName">张*</em>
-                                <em  class="praiseNo02 dat-Phone">136***53663</em>
+                                <em  class="praiseNo02 dat-Phone">134***53663</em>
                                   </p>
                                 <p class="list_jipiao"><em class="praiseNo01 dat-UserName">王*</em>
                                 <em  class="praiseNo02 dat-Phone">136***32328</em>
