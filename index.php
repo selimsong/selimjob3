@@ -44,10 +44,10 @@ switch ($rate) {
        $img_array[] = array('bottomImg' => 'lost'.$lost[0].'.png', 'key' => $key);
 	   break;
 }
-for($i=1; $i<-5; $i++){
-$img_array[] = array('bottomImg' => 'lost'.$lost[$i].'.png', 'key' => $key);
+for($i=1; $i<=5; $i++){
+$img_array[$i] = array('bottomImg' => 'lost'.$lost[$i].'.png', 'key' => $key);
 }
-//print_r($img_array);
+
 echo 'var imgId  =new Array(3);';
 echo 'var imgKey =new Array(3);';
 foreach($img_array as $k => $value){
@@ -75,7 +75,7 @@ foreach($img_array as $k => $value){
         </div>
         <div id="handwrapper"><img src="hand.png" /></div>
     </div>
-    
+    <link rel="stylesheet" href="jquery.mobile-1.2.0.min.css" />
     <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="jquery.mobile-1.2.0.min.js"></script>
     <script type="text/javascript" src="wScratchPad.js"></script>
@@ -111,6 +111,7 @@ foreach($img_array as $k => $value){
             return false;
         });
     });
+
     </script>
 </body>
 </html>
