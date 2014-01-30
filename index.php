@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
     <style>
         html, body { margin:0; padding:0; }
         img { margin:0; }
@@ -44,8 +45,12 @@ switch ($rate) {
        $img_array[] = array('bottomImg' => 'lost'.$lost[0].'.png', 'key' => $key);
 	   break;
 }
-for($i=1; $i<=5; $i++){
-$img_array[$i] = array('bottomImg' => 'lost'.$lost[$i].'.png', 'key' => $key);
+for($i=1; $i<=4; $i++){
+   if(4 == $i){
+	   $img_array[$i] = array('bottomImg' => 'five.png', 'key' => $key);
+    }else{
+	   $img_array[$i] = array('bottomImg' => 'lost'.$lost[$i].'.png', 'key' => $key);
+	}	
 }
 
 echo 'var imgId  =new Array(3);';
@@ -91,10 +96,12 @@ foreach($img_array as $k => $value){
 		    image2 : 'top.png',
 		    realtimePercent: true,
             scratchMove: function(e, percent) {
-                if (percent > 40) {
+                if (percent > 10) {
 			        if('lost' == imgKey[count]){  
                         this.clear();
-                        $('#afterscratch').show();
+						if(count < 4){
+                          $('#afterscratch').show();
+						}
 					}else{
 					
 					}
@@ -104,7 +111,7 @@ foreach($img_array as $k => $value){
         });
         
         $('#afterscratch').click(function(e){
-			++count;	
+			++count;
 			$(this).hide();
             sp.wScratchPad('image', './img/'+ imgId[count]);
             sp.wScratchPad('reset');
