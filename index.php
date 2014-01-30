@@ -24,8 +24,8 @@
         #handwrapper { position:absolute; top:0; left:0; width:12%; }
         #handwrapper img { margin:520% 0 0 10%; width:120%; }
         #afterscratchwrapper { width:40%; }
-        #afterscratch { margin:270% 0 0 35%; width:80%; }
-		#afterwin{ margin:270% 0 0 35%; width:80%; }
+        #afterscratch { margin:285% 0 0 35%; width:80%; }
+		#afterwin{ margin:285% 0 0 35%; width:80%; }
     </style>
     <script type="text/javascript">
 <?php
