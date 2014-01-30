@@ -103,10 +103,11 @@ foreach($img_array as $k => $value){
         var sp = $("#scratchpad").wScratchPad({
 		    width  : sw,
 	    	height : sh,
+			size   : 20,
 	    	image: './img/'+ imgId[count],
 		    image2 : 'top.png',
 		    realtimePercent: true,
-            scratchMove: function(e, percent) {
+            scratchUp: function(e, percent) {
                 if (percent > 40) {
 			        if('lost' == imgKey[count]){  
                         //this.clear();
@@ -116,10 +117,10 @@ foreach($img_array as $k => $value){
 				       //var ctx=c.getContext("2d");
 					   //ctx.drawImage(img, 0, 0, sw, sh);
                           
-						 // if(count == 4){
-						  //}else{
+					if(count == 4){
+					}else{
 						$('#afterscratch').show();  
-						  // }
+					}
 					}else{
 					  this.clear();
 					  $('#afterwin').show();
