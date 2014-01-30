@@ -27,6 +27,7 @@
         #afterscratch { margin:270% 0 0 35%; width:80%; }
 		#afterwin{ margin:270% 0 0 35%; width:80%; }
     </style>
+    <link rel="prefetch" href="top.png" />
 </head>
 <script type="text/javascript">
 <?php
