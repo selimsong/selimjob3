@@ -41,7 +41,7 @@
         
         <div class="btnwrapper" id="afterscratchwrapper">
             <!-- 再刮一次或者完善个人资料 -->
-            <!-- <a id="afterscratch" class="btn" href="#"><img src="tip01.png" alt="再刮一次" /></a> -->
+            <a id="afterscratch" class="btn" style="display:none;" href="#"><img src="tip01.png" alt="再刮一次" /></a>
         </div>
         <div id="handwrapper"><img src="hand.png" /></div>
     </div>
@@ -51,11 +51,25 @@
     <script>
     $(function(){
         var scratchOverlay = $('#scratchpad img');
-        $("#scratchpad").wScratchPad({
+        var sp = $("#scratchpad").wScratchPad({
 		    width  : scratchOverlay.width(),
 	    	height : scratchOverlay.height(),
 	    	image: 'lost1.png',
-		    image2 : 'top.png'
+		    image2 : 'top.png',
+		    realtimePercent: true,
+            scratchMove: function(e, percent) {
+                if (percent > 40) {
+                    this.clear();
+                    $('#afterscratch').show();
+                }
+            },
+        });
+        
+        $('#afterscratch').click(function(e){
+            sp.wScratchPad('image', 'lost2.png');
+            sp.wScratchPad('reset');
+            $(this).hide();
+            return false;
         });
     });
     </script>
