@@ -30,6 +30,7 @@
     <script type="text/javascript">
 <?php
 include_once('config.php');
+include_once('jiang.php');
 session_start();
 $lost = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 $win  = array(1, 2);
@@ -126,6 +127,7 @@ foreach($img_array as $k => $value){
 						$('#afterscratch').show();  
 					}
 					}else{
+						
 					 // this.clear();
 					  $('#afterwin').show();
 					}
