@@ -10,7 +10,6 @@
 
 <link rel="Stylesheet" type="text/css" href="./css/center.css?v=1" />
 <script type="text/javascript" src="./js/jquery.min.js?v=1"></script>
-<script src="//rawgithub.com/aamirafridi/jQuery.Marquee/master/jquery.marquee.min.js?v=1.0" type="text/javascript"></script>
 <style type="text/css">
 		.marquee-vert {
 		  overflow: hidden;
@@ -76,22 +75,6 @@ $(".tijaio02").click(function () {
 });
 
 
-$(function(){
-
-	var $mwo = $('.marquee-vert');
-	//Direction upward
-	$('.marquee-vert').marquee({
-		direction: 'up'	
-	});
-
-	//toggle
-	$('.marquee-vert').hover(function(e){
-		$mwo.trigger('pause');
-	},function(){
-		$mwo.trigger('resume');
-	});
-
-});
 </script>
 </body>
 </html>

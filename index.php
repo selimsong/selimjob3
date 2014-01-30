@@ -25,6 +25,7 @@
         #handwrapper img { margin:520% 0 0 10%; width:120%; }
         #afterscratchwrapper { width:40%; }
         #afterscratch { margin:270% 0 0 35%; width:80%; }
+		#afterwin{ margin:270% 0 0 35%; width:80%; }
     </style>
 </head>
 <script type="text/javascript">
@@ -33,7 +34,7 @@ include_once('config.php');
 $lost = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 $win  = array(1, 2);
 shuffle($lost);
-$rate = rand(3,4);
+$rate = rand(1,2);
 switch ($rate) {
     case 1:
         $img_array[] = array('bottomImg' => 'win'.$win[0].'.png', 'key' => $win1_key);
@@ -65,9 +66,9 @@ foreach($img_array as $k => $value){
     <div id="container">
         <img style="width:100%;" src="./images/bg.jpg" />
         
-        <div class="btnwrapper" id="detailwrapper"><a id="detail" class="btn" href="#"><img src="detail.png" alt="更多详情" /></a></div>
-        <div class="btnwrapper" id="winwrapper"><a id="win" class="btn" href="#"><img src="win.png" alt="中奖名单" /></a></div>
-        <div class="btnwrapper" id="userwrapper"><a id="user" class="btn" href="#"><img src="user.png" alt="个人中心" /></a></div>
+        <div class="btnwrapper" id="detailwrapper"><a id="detail" class="btn" href="detail.html"><img src="detail.png" alt="更多详情" /></a></div>
+        <div class="btnwrapper" id="winwrapper"><a id="win" class="btn" href="center.php#winline"><img src="win.png" alt="中奖名单" /></a></div>
+        <div class="btnwrapper" id="userwrapper"><a id="user" class="btn" href="center.php"><img src="user.png" alt="个人中心" /></a></div>
         <div id="scratchwrapper">
             <div id="scratchpad">
                 <img style="visibility:hidden;" src="./img/<?php echo $img_array[0]['bottomImg'];  ?>" />
@@ -77,6 +78,7 @@ foreach($img_array as $k => $value){
         <div class="btnwrapper" id="afterscratchwrapper">
             <!-- 再刮一次或者完善个人资料 -->
             <a id="afterscratch" class="btn" style="display:none;" href="#"><img src="tip01.png" alt="再刮一次" /></a>
+            <a id="afterwin" class="btn" style="display:none;" href="center.php"><img src="tip02.png" alt="完善个人资料" /></a>
         </div>
         <div id="handwrapper"><img src="hand.png" /></div>
     </div>
@@ -92,7 +94,7 @@ foreach($img_array as $k => $value){
         var sp = $("#scratchpad").wScratchPad({
 		    width  : scratchOverlay.width(),
 	    	height : scratchOverlay.height(),
-	    	image: 'lost1.png',
+	    	image: './img/'+ imgId[count],
 		    image2 : 'top.png',
 		    realtimePercent: true,
             scratchMove: function(e, percent) {
@@ -103,7 +105,8 @@ foreach($img_array as $k => $value){
                           $('#afterscratch').show();
 						}
 					}else{
-					
+					  this.clear();
+					  $('#afterwin').show();
 					}
 					
                 }
