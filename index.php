@@ -52,7 +52,7 @@ for($i=1; $i<=4; $i++){
 	   $img_array[$i] = array('bottomImg' => 'lost'.$lost[$i].'.png', 'key' => $key);
 	}	
 }
-
+shuffle($img_array);
 echo 'var imgId  =new Array(3);';
 echo 'var imgKey =new Array(3);';
 foreach($img_array as $k => $value){

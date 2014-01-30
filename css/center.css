@@ -1,4 +1,4 @@
-body {margin:0px;}
+body {margin:0px; color:#FFFFFF}
 #pagewrap {margin: 0px auto;}
 #content {position: absolute; width: 100%;}
 #content {
@@ -96,9 +96,16 @@ img{
 .luck_name_box {
     left: 0;
     position: absolute;
-    top: 55.22%;
+    top: 52%;
     width: 100%;
 }
+.luck_name_box2{
+    left: 0;
+    position: absolute;
+    top: 70%;
+    width: 100%;
+}
+
 .list01 {
     left: 0;
     overflow: hidden;
@@ -110,7 +117,13 @@ img{
     color:#FFF;
     font-size: 20px;
     font-weight: 500;
-    left: 22%;
+    left: 10%;
     margin: 0;
     position: relative;
+}
+.dat-UserName{
+	margin-right:6px;
+}
+.shuibei{
+    top: 62%;
 }

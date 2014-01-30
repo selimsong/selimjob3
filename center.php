@@ -30,11 +30,65 @@
         </div>
         <img src="images/tijaio02.png" class="tijaio02">
         <a id="winline" name="winline"> </a>
-      <div class="luck_name_box">
+      <div class="luck_name_box" >
+        <div class="list01" >
+                <h3>艾薇儿签名潮T获得者：</h3>
+                  <div style="overflow:hidden;min-height:160px;position: relative;   " id="demo">
+                    <div style="position: absolute;left:20%;height: 180px;" class="feiji" id="demo1 ">
+                            <p class="list_jipiao"><em class="praiseNo01 dat-UserName">徐*</em>
+                                <em  class="praiseNo02 dat-Phone">138***37676</em>
+                               </p>
+                                <p class="list_jipiao"><em class="praiseNo01 dat-UserName">张*</em>
+                                <em  class="praiseNo02 dat-Phone">136***53663</em>
+                                  </p>
+                                <p class="list_jipiao"><em class="praiseNo01 dat-UserName">王*</em>
+                                <em  class="praiseNo02 dat-Phone">136***32328</em>
+                               </p>
+                                                   <p class="list_jipiao"><em class="praiseNo01 dat-UserName">李*</em>
+                                <em id="phone1" class="praiseNo02 dat-Phone">136***32328</em>
+                               </p>
+                    </div>
+                    
+                    <div style="position: absolute;left:52%;height: 180px;" class="feiji">
+                            <p class="list_jipiao"><em class="praiseNo01 dat-UserName">徐*</em>
+                                <em id="phone1" class="praiseNo02 dat-Phone">138***37676</em>
+                               </p>
+                                <p class="list_jipiao"><em class="praiseNo01 dat-UserName">张*</em>
+                                <em id="phone1" class="praiseNo02 dat-Phone">136***53663</em>
+                                  </p>
+                                <p class="list_jipiao"><em class="praiseNo01 dat-UserName">王*</em>
+                                <em id="phone1" class="praiseNo02 dat-Phone">136***32328</em>
+                               </p>
+                                                   <p class="list_jipiao"><em class="praiseNo01 dat-UserName">李*</em>
+                                <em id="phone1" class="praiseNo02 dat-Phone">136***32328</em>
+                               </p>
+                    </div>
+
+                </div>
+                 <hr width="80%" style="height:1px; border:none;   border-top:1px  #fff dashed ;" /> 
+            </div>
+       </div>
+       
+      <div class="luck_name_box2">
         <div class="list01">
                 <h3>艾薇儿签名潮T获得者：</h3>
                   <div style="overflow:hidden;min-height:157px;position: relative;   " id="demo">
-                    <div style="position: absolute;left:22%;" class="feiji marquee-vert" id="demo1 ">
+                    <div style="position: absolute;left:20%;height: 180px;" class="feiji" id="demo1 ">
+                            <p class="list_jipiao"><em class="praiseNo01 dat-UserName">徐*</em>
+                                <em  class="praiseNo02 dat-Phone">138***37676</em>
+                               </p>
+                                <p class="list_jipiao"><em class="praiseNo01 dat-UserName">张*</em>
+                                <em  class="praiseNo02 dat-Phone">136***53663</em>
+                                  </p>
+                                <p class="list_jipiao"><em class="praiseNo01 dat-UserName">王*</em>
+                                <em  class="praiseNo02 dat-Phone">136***32328</em>
+                               </p>
+                                                   <p class="list_jipiao"><em class="praiseNo01 dat-UserName">李*</em>
+                                <em id="phone1" class="praiseNo02 dat-Phone">136***32328</em>
+                               </p>
+                    </div>
+                    
+                    <div style="position: absolute;left:52%;height: 180px;" class="feiji">
                             <p class="list_jipiao"><em class="praiseNo01 dat-UserName">徐*</em>
                                 <em id="phone1" class="praiseNo02 dat-Phone">138***37676</em>
                                </p>
@@ -52,7 +106,8 @@
                 </div>
             </div>
        </div>
-            
+       
+       
             
             
         
