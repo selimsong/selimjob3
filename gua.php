@@ -42,15 +42,33 @@
      <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="wScratchPad.js"></script>
     <script>
-    $(function(){
+      function clear() {
+		
+				  $("#lost_tip").show();
+				  $("#try_again").show();
+				   ++count;
+				   vType = 'stop';
+			 
+			 
+		  }else if('undefined' != typeof imgKey[count]  && 'lost' != imgKey[count]){
+			   //console.log(imgKey[count]);
+		     $("#update_info").show();
+		  }
+
+		}
+ 
         var scratchOverlay = $('#scratchpad img');
         $("#scratchpad").wScratchPad({
 		    width  : scratchOverlay.width(),
 	    	height : scratchOverlay.height(),
-		    image2 : 'top.png'
+		    image2 : 'top.png',
+			scratchUp: function(e, percent) {
+				  if(percent > 40)
+				   clear();
+			}
         });
 		$("#lost1").show();
-    });
+   
     </script>
         <div class="btnwrapper" id="afterscratchwrapper">
             <!-- 再刮一次或者完善个人资料 -->

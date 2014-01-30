@@ -77,7 +77,7 @@
 	{
 		width			: 210,					// set width - best to match image width
 		height			: 100,					// set height - best to match image height
-		image			: 'images/slide1.png',	// set image path
+		image			: 'images/slide1.jpg',	// set image path
 		image2			: null,					// set overlay image path - if set color is not used
 		color			: '#336699',			// set scratch color - if image2 is not set uses color
 		overlay			: 'none',				// set the type of overlay effect 'none', 'lighter' - only used with color
@@ -244,7 +244,7 @@
 		drawImage: function(imagePath)
 		{
 			var $this = this;
-			var img = new Image();
+			var img = document.createElement("img");
   			img.src = imagePath;
   			$(img).load(function(){
   				$this.ctx.drawImage(img, 0, 0, $this.settings.width, $this.settings.height);

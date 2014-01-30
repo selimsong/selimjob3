@@ -103,6 +103,7 @@ function isCanvasSupported(){
 			height          : 278, 
 			image           : './images/bottom_bg.png',
 			image2          : './images/top.png',
+			realtimePercent : true,
 			scratchUp: function(e, percent) {
 				  if(percent > 40)
 				   clear();
