@@ -34,7 +34,7 @@
         <div class="list01" >
                 <h3>艾薇儿签名潮T获得者：</h3>
                   <div style="overflow:hidden;min-height:160px;position: relative;   " id="demo">
-                    <div style="position: absolute;left:20%;height: 180px;" class="feiji" id="demo1 ">
+                    <div style="position: absolute;left:15%;height: 180px;" class="feiji" id="demo1 ">
                             <p class="list_jipiao"><em class="praiseNo01 dat-UserName">徐*</em>
                                 <em  class="praiseNo02 dat-Phone">138***37676</em>
                                </p>
@@ -73,7 +73,7 @@
         <div class="list01">
                 <h3>艾薇儿签名潮T获得者：</h3>
                   <div style="overflow:hidden;min-height:157px;position: relative;   " id="demo">
-                    <div style="position: absolute;left:20%;height: 180px;" class="feiji" id="demo1 ">
+                    <div style="position: absolute;left:15%;height: 180px;" class="feiji" id="demo1 ">
                             <p class="list_jipiao"><em class="praiseNo01 dat-UserName">徐*</em>
                                 <em  class="praiseNo02 dat-Phone">138***37676</em>
                                </p>
