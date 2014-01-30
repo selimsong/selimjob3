@@ -84,8 +84,8 @@ foreach($img_array as $k => $value){
         <div id="handwrapper"><img src="hand.png" /></div>
     </div>
     <link rel="stylesheet" href="jquery.mobile-1.2.0.min.css" />
-    <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="jquery.mobile-1.2.0.min.js"></script>
+    <!--<script type="text/javascript" src="jquery-1.7.2.min.js"></script>-->
+    <!--<script type="text/javascript" src="jquery.mobile-1.2.0.min.js"></script> -->
     <script type="text/javascript" src="wScratchPad.js"></script>
     <script>
     $(function(){
