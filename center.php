@@ -65,7 +65,6 @@
                     </div>
 
                 </div>
-                 <hr width="80%" style="height:1px; border:none;   border-top:1px  #fff dashed ;" /> 
             </div>
        </div>
        
