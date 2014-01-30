@@ -69,7 +69,7 @@ foreach($img_array as $k => $value){
         
         <div class="btnwrapper" id="detailwrapper"><a id="detail" class="btn" href="detail.html"><img src="detail.png" alt="更多详情" /></a></div>
         <div class="btnwrapper" id="winwrapper"><a id="win" class="btn" href="center.php#winline" rel="external"><img src="win.png" alt="中奖名单" /></a></div>
-        <div class="btnwrapper" id="userwrapper"><a id="user" class="btn data-role-none"  rel="external"   href="center.php"><img src="user.png" alt="个人中心" /></a></div>
+        <div class="btnwrapper" id="userwrapper"><a id="user" class="btn"  rel="external"   href="center.php"><img src="user.png" alt="个人中心" /></a></div>
         <div id="scratchwrapper">
             <div id="scratchpad">
                 <img style="visibility:hidden;" src="./img/<?php echo $img_array[0]['bottomImg'];  ?>" />
@@ -88,9 +88,6 @@ foreach($img_array as $k => $value){
     <script type="text/javascript" src="jquery.mobile-1.2.0.min.js"></script>
     <script type="text/javascript" src="wScratchPad.js"></script>
     <script>
-	//$(document).on('pagebeforeshow', '#container', function(){       
-     //    $('a').removeClass('ui-link');
-    // });
     $(function(){
 		var vType = 'run';
 		var count = 0;
