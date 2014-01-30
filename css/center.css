@@ -127,3 +127,11 @@ img{
 .shuibei{
     top: 62%;
 }
+
+p {
+    color:#FFF;
+    font-weight: 500;
+    left: 22%;
+    margin: 8px;
+    position: relative;
+}
