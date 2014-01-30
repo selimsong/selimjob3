@@ -41,7 +41,7 @@
         
         <div class="btnwrapper" id="afterscratchwrapper">
             <!-- 再刮一次或者完善个人资料 -->
-            <a id="afterscratch" class="btn" style="display:none;" href="#"><img src="tip01.png" alt="再刮一次" /></a> 
+            <a id="afterscratch" class="btn" style="display:none;" href="#"><img src="tip01.png" alt="再刮一次" /></a>
         </div>
         <div id="handwrapper"><img src="hand.png" /></div>
     </div>
@@ -49,36 +49,29 @@
     <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="wScratchPad.js"></script>
     <script>
-	  function reset_to() {
-          vType = 'run';
-                  $("#try_again").hide();
-                  $("#lost_tip").hide();
-                  var img=document.getElementById("lost_tip");
-                  img.src = './img/t'+ imgId[count];
-                  var c=document.getElementById("canvas");
-                  var ctx=c.getContext("2d");
-                  console.log(imgId[count]);
-                  ctx.drawImage(img,0, 0);
-                  sp.wScratchPad('image', './img/'+ imgId[count]);
-                  sp.wScratchPad('image2', './images/top.png');
-                  sp.wScratchPad('reset');
-       
-       }
-
+    $(function(){
         var scratchOverlay = $('#scratchpad img');
-        $("#scratchpad").wScratchPad({
+        var sp = $("#scratchpad").wScratchPad({
 		    width  : scratchOverlay.width(),
 	    	height : scratchOverlay.height(),
 	    	image: 'lost1.png',
 		    image2 : 'top.png',
-			realtimePercent : true,
-			scratchUp: function(e, percent) {
-				  if(percent > 40)
-				   clear();
-				   $("#afterscratch").show();
-			}
+		    realtimePercent: true,
+            scratchMove: function(e, percent) {
+                if (percent > 40) {
+                    this.clear();
+                    $('#afterscratch').show();
+                }
+            },
         });
-
+        
+        $('#afterscratch').click(function(e){
+            sp.wScratchPad('image', 'lost2.png');
+            sp.wScratchPad('reset');
+            $(this).hide();
+            return false;
+        });
+    });
     </script>
 </body>
 </html>
