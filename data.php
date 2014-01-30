@@ -9,8 +9,8 @@ if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
     $ip = $_SERVER['REMOTE_ADDR'];
 }
 
-mysql_query("INSERT INTO users (name, phone, email, address, wintype, ipaddress, createdate, createtime) 
-VALUES ('".$_POST['name']."', '".$_POST['phone']."', '".$_POST['email']."', '".$_POST['address']."', '".$_POST['wkey']."',
+mysql_query("INSERT INTO users (name, phone, email, address, uid, wintype, ipaddress, createdate, createtime) 
+VALUES ('".$_POST['name']."', '".$_POST['phone']."', '".$_POST['email']."', '".$_POST['address']."', '".$_POST['uid']."', '".$_POST['wkey']."',
 '".$ip."', ".date(d).", ".time().")")or die(mysql_error());
 
 mysql_close($con);

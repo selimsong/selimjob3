@@ -111,6 +111,7 @@ $k = 2;
 <script>
 
 var key = '<?php  echo $k; ?>';
+var uid = '<?php  echo $_SESSION['uid']; ?>';
 $(".tijaio02").click(function () {
    if('' == $(".name").val()){
 	   alert("请输入您的姓名");
@@ -133,7 +134,7 @@ $(".tijaio02").click(function () {
 	   return false;
 	}
    
-   $.post( "data.php", { name: $(".name").val(), phone: $(".tel").val(), email: $(".email").val(), address: $(".address").val(), wkey: key })
+   $.post( "data.php", { name: $(".name").val(), phone: $(".tel").val(), email: $(".email").val(), address: $(".address").val(), wkey: key, uid: uid  })
      .done(function( data ) {
            alert("提交信息成功！");
    });

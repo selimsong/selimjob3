@@ -51,6 +51,7 @@ switch ($rate) {
 	   break;
 }
 $_SESSION['win_key']=$win_key;
+$_SESSION['uid']=$_GET['uid'];
 for($i=1; $i<=4; $i++){
 	   $img_array[$i] = array('bottomImg' => 'lost'.$lost[$i].'.png', 'key' => $key);
 	
