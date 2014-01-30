@@ -47,7 +47,7 @@ switch ($rate) {
 for($i=1; $i<-5; $i++){
 $img_array[] = array('bottomImg' => 'lost'.$lost[$i].'.png', 'key' => $key);
 }
-print_r($img_array);
+//print_r($img_array);
 echo 'var imgId  =new Array(3);';
 echo 'var imgKey =new Array(3);';
 foreach($img_array as $k => $value){
