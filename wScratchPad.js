@@ -1,16 +1,3 @@
-/******************************************
- * Websanova.com
- *
- * Resources for web entrepreneurs
- *
- * @author          Websanova
- * @copyright       Copyright (c) 2012 Websanova.
- * @license         This wScratchPad jQuery plug-in is dual licensed under the MIT and GPL licenses.
- * @link            http://www.websanova.com
- * @github			http://github.com/websanova/wScratchPad
- * @version         Version 1.4.4
- *
- ******************************************/
 (function($)
 {
 	$.fn.wScratchPad = function(option, settings)
@@ -120,6 +107,7 @@
 				$(this.canvas)
 				.attr('width', this.settings.width + 'px')
 				.attr('height', this.settings.height + 'px')
+				.attr('id', 'canvas')
 			)
 			
 			$(this.canvas)

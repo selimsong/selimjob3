@@ -78,7 +78,7 @@ foreach($img_array as $k => $value){
                 <img style="visibility:hidden;" src="./img/<?php echo $img_array[0]['bottomImg'];  ?>" />
             </div>
         </div>
-        
+        <img id="lost_tip" style="display:none;" class="tipa" src="./img/t<?php echo $img_array[0]['bottomImg'];  ?>" >
         <div class="btnwrapper" id="afterscratchwrapper">
             <!-- 再刮一次或者完善个人资料 -->
             <a id="afterscratch" class="btn" style="display:none;" data-role="none" rel="external" href="#"><img id="tip01" src="tip01.png" alt="再刮一次" /></a>
@@ -109,7 +109,12 @@ foreach($img_array as $k => $value){
             scratchMove: function(e, percent) {
                 if (percent > 40) {
 			        if('lost' == imgKey[count]){  
-                        this.clear();
+                        //this.clear();
+					   var img=document.getElementById("lost_tip");
+				       img.src = './img/t'+ imgId[count];
+				       var c=document.getElementById("canvas");
+				       var ctx=c.getContext("2d");
+					   ctx.drawImage(img, 0, 0, sw, sh);
 						if(count < 4){
                           $('#afterscratch').show();
 						}
