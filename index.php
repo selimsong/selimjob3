@@ -27,9 +27,7 @@
         #afterscratch { margin:270% 0 0 35%; width:80%; }
 		#afterwin{ margin:270% 0 0 35%; width:80%; }
     </style>
-    <link rel="prefetch" href="top.png" />
-</head>
-<script type="text/javascript">
+    <script type="text/javascript">
 <?php
 include_once('config.php');
 $lost = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
@@ -63,6 +61,10 @@ foreach($img_array as $k => $value){
 }
 ?>
 </script>
+<link rel="prefetch" href="top.png" />
+<link rel="prefetch" href="./img/<?php echo $img_array[0]['bottomImg'];  ?>" />
+</head>
+
 <body data-role="page">
     <div id="container" >
         <img style="width:100%;" src="./images/bg.jpg" />
@@ -92,9 +94,14 @@ foreach($img_array as $k => $value){
 		var vType = 'run';
 		var count = 0;
         var scratchOverlay = $('#scratchpad img');
+		var sw = scratchOverlay.width();
+        var sh = scratchOverlay.height();
+        if (sh == 0) {
+            sh = parseInt((sw/209)*278);
+        }
         var sp = $("#scratchpad").wScratchPad({
-		    width  : scratchOverlay.width(),
-	    	height : scratchOverlay.height(),
+		    width  : sw,
+	    	height : sh,
 	    	image: './img/'+ imgId[count],
 		    image2 : 'top.png',
 		    realtimePercent: true,
@@ -121,6 +128,11 @@ foreach($img_array as $k => $value){
             sp.wScratchPad('reset');
             return false;
         });
+		
+		
+
+
+		
     });
 
     </script>
