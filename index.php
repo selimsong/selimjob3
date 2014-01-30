@@ -66,9 +66,9 @@
         });
         
         $('#afterscratch').click(function(e){
+			$(this).hide();
             sp.wScratchPad('image', 'lost2.png');
             sp.wScratchPad('reset');
-            $(this).hide();
             return false;
         });
     });
