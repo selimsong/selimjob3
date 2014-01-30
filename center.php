@@ -60,15 +60,6 @@ $k = 2;
                             <p class="list_jipiao"><em class="praiseNo01 dat-UserName">徐*</em>
                                 <em id="phone1" class="praiseNo02 dat-Phone">138***37676</em>
                                </p>
-                                <p class="list_jipiao"><em class="praiseNo01 dat-UserName">张*</em>
-                                <em id="phone1" class="praiseNo02 dat-Phone">136***53663</em>
-                                  </p>
-                                <p class="list_jipiao"><em class="praiseNo01 dat-UserName">王*</em>
-                                <em id="phone1" class="praiseNo02 dat-Phone">136***32328</em>
-                               </p>
-                                                   <p class="list_jipiao"><em class="praiseNo01 dat-UserName">李*</em>
-                                <em id="phone1" class="praiseNo02 dat-Phone">136***32328</em>
-                               </p>
                     </div>
 
                 </div>
@@ -89,8 +80,6 @@ $k = 2;
                                 <p class="list_jipiao"><em class="praiseNo01 dat-UserName">王*</em>
                                 <em  class="praiseNo02 dat-Phone">136***32328</em>
                                </p>
-                                                   <p class="list_jipiao"><em class="praiseNo01 dat-UserName">李*</em>
-                                <em id="phone1" class="praiseNo02 dat-Phone">136***32328</em>
                                </p>
                     </div>
                     
