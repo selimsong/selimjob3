@@ -62,8 +62,8 @@ foreach($img_array as $k => $value){
 }
 ?>
 </script>
-<body >
-    <div id="container" data-role="page">
+<body data-role="page">
+    <div id="container" >
         <img style="width:100%;" src="./images/bg.jpg" />
         
         <div class="btnwrapper" id="detailwrapper"><a id="detail" class="btn" href="detail.html"><img src="detail.png" alt="更多详情" /></a></div>
