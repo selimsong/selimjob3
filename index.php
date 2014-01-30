@@ -96,7 +96,7 @@ foreach($img_array as $k => $value){
 		    image2 : 'top.png',
 		    realtimePercent: true,
             scratchMove: function(e, percent) {
-                if (percent > 10) {
+                if (percent > 40) {
 			        if('lost' == imgKey[count]){  
                         this.clear();
 						if(count < 4){
