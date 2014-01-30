@@ -46,13 +46,14 @@ switch ($rate) {
 	   break;
 }
 for($i=1; $i<=4; $i++){
-   if(4 == $i){
-	   $img_array[$i] = array('bottomImg' => 'five.png', 'key' => $key);
-    }else{
 	   $img_array[$i] = array('bottomImg' => 'lost'.$lost[$i].'.png', 'key' => $key);
-	}	
+	
 }
 shuffle($img_array);
+if('lost' == $img_array[4]['key']){
+	 $img_array[4] = array('bottomImg' => 'five.png', 'key' => 'lost');
+ }
+
 echo 'var imgId  =new Array(3);';
 echo 'var imgKey =new Array(3);';
 foreach($img_array as $k => $value){
@@ -80,7 +81,7 @@ foreach($img_array as $k => $value){
         
         <div class="btnwrapper" id="afterscratchwrapper">
             <!-- 再刮一次或者完善个人资料 -->
-            <a id="afterscratch" class="btn" style="display:none;" href="#"><img src="tip01.png" alt="再刮一次" /></a>
+            <a id="afterscratch" class="btn" style="display:none;" rel="external" href="#"><img id="tip01" src="tip01.png" alt="再刮一次" /></a>
             <a id="afterwin" class="btn" style="display:none;" rel="external"  href="center.php"><img src="tip02.png" alt="完善个人资料" /></a>
         </div>
         <div id="handwrapper"><img src="hand.png" /></div>
@@ -123,7 +124,7 @@ foreach($img_array as $k => $value){
         
         $('#afterscratch').click(function(e){
 			++count;
-			$(this).hide();
+			$("#afterscratch").hide();
             sp.wScratchPad('image', './img/'+ imgId[count]);
             sp.wScratchPad('reset');
             return false;
