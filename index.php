@@ -57,9 +57,9 @@ for($i=1; $i<=4; $i++){
 	
 }
 shuffle($img_array);
-if('lost' == $img_array[4]['key']){
-	 $img_array[4] = array('bottomImg' => 'five.png', 'key' => 'lost');
- }
+//if('lost' == $img_array[4]['key']){
+$img_array[5] = array('bottomImg' => 'five.png', 'key' => 'lost');
+ //}
 
 echo 'var imgId  =new Array(3);';
 echo 'var imgKey =new Array(3);';
@@ -123,7 +123,7 @@ foreach($img_array as $k => $value){
 					ctx.drawImage(img, 0, 0, sw, sh);
 			        if('lost' == imgKey[count]){  
                         //this.clear();
-					if(count == 4){
+					if(count == 5){
 					}else{
 						$('#afterscratch').show();  
 					}
