@@ -34,7 +34,7 @@ include_once('config.php');
 $lost = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 $win  = array(1, 2);
 shuffle($lost);
-$rate = rand(1,2);
+$rate = rand(1,4);
 switch ($rate) {
     case 1:
         $img_array[] = array('bottomImg' => 'win'.$win[0].'.png', 'key' => $win1_key);
@@ -62,13 +62,13 @@ foreach($img_array as $k => $value){
 }
 ?>
 </script>
-<body data-role="page">
-    <div id="container">
+<body >
+    <div id="container" data-role="page">
         <img style="width:100%;" src="./images/bg.jpg" />
         
         <div class="btnwrapper" id="detailwrapper"><a id="detail" class="btn" href="detail.html"><img src="detail.png" alt="更多详情" /></a></div>
-        <div class="btnwrapper" id="winwrapper"><a id="win" class="btn" href="center.php#winline"><img src="win.png" alt="中奖名单" /></a></div>
-        <div class="btnwrapper" id="userwrapper"><a id="user" class="btn" href="center.php"><img src="user.png" alt="个人中心" /></a></div>
+        <div class="btnwrapper" id="winwrapper"><a id="win" class="btn" href="center.php#winline" rel="external"><img src="win.png" alt="中奖名单" /></a></div>
+        <div class="btnwrapper" id="userwrapper"><a id="user" class="btn data-role-none"  rel="external"   href="center.php"><img src="user.png" alt="个人中心" /></a></div>
         <div id="scratchwrapper">
             <div id="scratchpad">
                 <img style="visibility:hidden;" src="./img/<?php echo $img_array[0]['bottomImg'];  ?>" />
@@ -78,7 +78,7 @@ foreach($img_array as $k => $value){
         <div class="btnwrapper" id="afterscratchwrapper">
             <!-- 再刮一次或者完善个人资料 -->
             <a id="afterscratch" class="btn" style="display:none;" href="#"><img src="tip01.png" alt="再刮一次" /></a>
-            <a id="afterwin" class="btn" style="display:none;" href="center.php"><img src="tip02.png" alt="完善个人资料" /></a>
+            <a id="afterwin" class="btn" style="display:none;" rel="external"  href="center.php"><img src="tip02.png" alt="完善个人资料" /></a>
         </div>
         <div id="handwrapper"><img src="hand.png" /></div>
     </div>
@@ -87,6 +87,9 @@ foreach($img_array as $k => $value){
     <script type="text/javascript" src="jquery.mobile-1.2.0.min.js"></script>
     <script type="text/javascript" src="wScratchPad.js"></script>
     <script>
+	//$(document).on('pagebeforeshow', '#container', function(){       
+     //    $('a').removeClass('ui-link');
+    // });
     $(function(){
 		var vType = 'run';
 		var count = 0;
