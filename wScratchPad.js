@@ -237,7 +237,10 @@
 		{
 			if(this.settings.image)
 			{
-				this.sp.css({backgroundImage: 'url('+this.settings.image+')'});
+				this.sp.css({
+				    backgroundImage: 'url('+this.settings.image+')',
+				    backgroundSize: 'cover'
+				});
 			}
 		},
 
