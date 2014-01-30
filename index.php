@@ -22,7 +22,7 @@
         
         #handwrapper { position:absolute; top:0; left:0; width:12%; }
         #handwrapper img { margin:520% 0 0 10%; width:120%; }
-        #afterscratchwrapper { width:40%; display:none; }
+        #afterscratchwrapper { width:40%; }
         #afterscratch { margin:270% 0 0 35%; width:80%; }
     </style>
 </head>
@@ -35,11 +35,18 @@
         <div class="btnwrapper" id="userwrapper"><a id="user" class="btn" href="#"><img src="user.png" alt="个人中心" /></a></div>
         <div id="scratchwrapper">
             <div id="scratchpad">
-                <img id="lost1" style="display:none;" src="lost1.png" />
+                <img style="visibility:hidden;" src="lost1.png" />
             </div>
         </div>
-      
-     <script type="text/javascript" src="jquery.min.js"></script>
+        
+        <div class="btnwrapper" id="afterscratchwrapper">
+            <!-- 再刮一次或者完善个人资料 -->
+            <!-- <a id="afterscratch" class="btn" href="#"><img src="tip01.png" alt="再刮一次" /></a> -->
+        </div>
+        <div id="handwrapper"><img src="hand.png" /></div>
+    </div>
+    
+    <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="wScratchPad.js"></script>
     <script>
     $(function(){
@@ -47,18 +54,10 @@
         $("#scratchpad").wScratchPad({
 		    width  : scratchOverlay.width(),
 	    	height : scratchOverlay.height(),
+	    	image: 'lost1.png',
 		    image2 : 'top.png'
         });
-		$("#lost1").show();
     });
     </script>
-        <div class="btnwrapper" id="afterscratchwrapper">
-            <!-- 再刮一次或者完善个人资料 -->
-            <a id="afterscratch" class="btn" href="#"><img src="tip01.png" alt="再刮一次" /></a>
-        </div>
-        <div id="handwrapper"><img src="hand.png" /></div>
-    </div>
-    
-
 </body>
 </html>
