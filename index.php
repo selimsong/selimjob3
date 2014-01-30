@@ -112,14 +112,14 @@ foreach($img_array as $k => $value){
                         //this.clear();
 					   var img=document.getElementById("lost_tip");
 				       img.src = './img/t'+ imgId[count];
-				       var c=document.getElementById("canvas");
-				       var ctx=c.getContext("2d");
-					   ctx.drawImage(img, 0, 0, sw, sh);
+				       //var c=document.getElementById("canvas");
+				       //var ctx=c.getContext("2d");
+					   //ctx.drawImage(img, 0, 0, sw, sh);
                           
-						  if(count == 4){
-						  }else{
-							$('#afterscratch').show();  
-						   }
+						 // if(count == 4){
+						  //}else{
+						$('#afterscratch').show();  
+						  // }
 					}else{
 					  this.clear();
 					  $('#afterwin').show();

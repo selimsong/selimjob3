@@ -101,6 +101,7 @@ function isCanvasSupported(){
 		var sp = $("#wScratchPad").wScratchPad({
 			width           : 209,             
 			height          : 278, 
+			size            : 16,
 			image           : './images/bottom_bg.png',
 			image2          : './images/top.png',
 			realtimePercent : true,
