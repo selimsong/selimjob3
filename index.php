@@ -115,9 +115,11 @@ foreach($img_array as $k => $value){
 				       var c=document.getElementById("canvas");
 				       var ctx=c.getContext("2d");
 					   ctx.drawImage(img, 0, 0, sw, sh);
-						if(count < 4){
-                          $('#afterscratch').show();
-						}
+                          
+						  if(count == 4){
+						  }else{
+							$('#afterscratch').show();  
+						   }
 					}else{
 					  this.clear();
 					  $('#afterwin').show();
