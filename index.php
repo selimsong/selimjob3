@@ -81,8 +81,8 @@ foreach($img_array as $k => $value){
         
         <div class="btnwrapper" id="afterscratchwrapper">
             <!-- 再刮一次或者完善个人资料 -->
-            <a id="afterscratch" class="btn" style="display:none;" rel="external" href="#"><img id="tip01" src="tip01.png" alt="再刮一次" /></a>
-            <a id="afterwin" class="btn" style="display:none;" rel="external"  href="center.php"><img src="tip02.png" alt="完善个人资料" /></a>
+            <a id="afterscratch" class="btn" style="display:none;" data-role="none" rel="external" href="#"><img id="tip01" src="tip01.png" alt="再刮一次" /></a>
+            <a id="afterwin" class="btn" style="display:none;" data-role="none" rel="external"  href="center.php"><img src="tip02.png" alt="完善个人资料" /></a>
         </div>
         <div id="handwrapper"><img src="hand.png" /></div>
     </div>
