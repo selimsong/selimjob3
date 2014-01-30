@@ -67,7 +67,7 @@
                 </div>
             </div>
        </div>
-       
+       <div style="clear:both"></div>
       <div class="luck_name_box2">
         <div class="list01">
                 <h3>艾薇儿潮酷水杯获得者：</h3>
