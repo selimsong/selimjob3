@@ -81,8 +81,8 @@ foreach($img_array as $k => $value){
         <img id="lost_tip" style="display:none;" class="tipa" src="./img/t<?php echo $img_array[0]['bottomImg'];  ?>" >
         <div class="btnwrapper" id="afterscratchwrapper">
             <!-- 再刮一次或者完善个人资料 -->
-            <a id="afterscratch" class="btn" style="display:none;" data-role="none" rel="external" href="#"><img id="tip01" src="tip01.png" alt="再刮一次" /></a>
-            <a id="afterwin" class="btn" style="display:none;" data-role="none" rel="external"  href="center.php"><img src="tip02.png" alt="完善个人资料" /></a>
+            <a id="afterscratch" class="btn" style="display:none;z-index:10;" data-role="none" rel="external" href="#"><img id="tip01" src="tip01.png" alt="再刮一次" /></a>
+            <a id="afterwin" class="btn" style="display:none;z-index:10;" data-role="none" rel="external"  href="center.php"><img src="tip02.png" alt="完善个人资料" /></a>
         </div>
         <div id="handwrapper"><img src="hand.png" /></div>
     </div>
@@ -113,9 +113,9 @@ foreach($img_array as $k => $value){
                         //this.clear();
 					   var img=document.getElementById("lost_tip");
 				       img.src = './img/t'+ imgId[count];
-				       //var c=document.getElementById("canvas");
-				       //var ctx=c.getContext("2d");
-					   //ctx.drawImage(img, 0, 0, sw, sh);
+				       var c=document.getElementById("canvas");
+				       var ctx=c.getContext("2d");
+					   ctx.drawImage(img, 0, 0, sw, sh);
                           
 					if(count == 4){
 					}else{
