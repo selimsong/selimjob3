@@ -8,7 +8,7 @@
 	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 <![endif]-->
 
-<link rel="Stylesheet" type="text/css" href="./css/center.css?v=1" />
+<link rel="Stylesheet" type="text/css" href="./css/center.css?v=2" />
 <script type="text/javascript" src="./js/jquery.min.js?v=1"></script>
 <style type="text/css">
 		.marquee-vert {
