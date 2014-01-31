@@ -13,7 +13,7 @@ class Product extends CI_Controller {
 	
 	public function index(){
         $config = $this->Cache_model->loadConfig();
-        $config['seo_title'] = '产品列表';
+        $config['seo_title'] = '用户管理';
         $config['seo_keywords'] = $config['site_keywords'];
         $config['seo_description'] = $config['site_description'];
 
