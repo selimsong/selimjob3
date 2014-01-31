@@ -9,7 +9,7 @@ class Login extends CI_Controller {
 	{    
 		 $loginId = $this->session->userdata('UserName');
 		 if(!empty($loginId)){
-		 	redirect('admin/home');
+		 	redirect('admin/index.php?/home');
 		 }
          $data['error'] = $this->session->userdata('error');
          $this->session->unset_userdata('error');
@@ -48,12 +48,12 @@ class Login extends CI_Controller {
 			$error_msg = 'pls input your login id !';
 		}
 		$this->session->set_userdata(array('error' => $error_msg));
-		redirect('admin/login');
+		redirect('admin/index.php?/login');
 	}
 	
 	function logout(){
 		
 		$this->session->sess_destroy();
-		redirect('admin/login');
+		redirect('admin/index.php?/login');
 	}
 }
