@@ -28,6 +28,28 @@ class User extends MY_Controller {
 		$this->load->view('user', $data);
 	}
 	
+	public function win()
+	{
+		header('Content-Type: text/html; charset=UTF-8');
+	
+		$data['curNav'] = $this->uri->segment(1).$this->uri->segment(2);
+	
+		$con = mysql_connect("localhost","root","blabla1234");
+		mysql_select_db("scra", $con);
+		$result = mysql_query("SELECT * FROM users where wintype !=1");
+		$user = array();
+		while($row = mysql_fetch_array($result))
+		{
+			$user[] = $row;
+	
+		}
+		mysql_close($con);
+	
+		$data['user'] = $user;
+		$this->load->view('header');
+		$this->load->view('user', $data);
+	}
+	
 	public function add(){
 	
 	    $data['curNav'] = $this->uri->segment(1).$this->uri->segment(2);

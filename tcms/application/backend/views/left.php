@@ -18,11 +18,11 @@ $userPer = json_decode($this->session->userdata('userPermission'));
 		</a>
 		<ul class="wp-submenu wp-submenu-wrap">
 			<li class="wp-submenu-head">获奖用户</li>
-			<li class="wp-first-item"><a class="wp-first-item" href="<?php  echo site_url('/admin/index.php?/user'); ?>">All Users</a></li>
+			<li class="wp-first-item"><a class="wp-first-item" href="<?php  echo site_url('/admin/index.php?/user/win'); ?>">获奖用户</a></li>
 		</ul>
 		<ul class="wp-submenu wp-submenu-wrap">
 			<li class="wp-submenu-head">所有用户</li>
-			<li class="wp-first-item"><a class="wp-first-item" href="<?php  echo site_url('/admin/index.php?/user'); ?>">All Users</a></li>
+			<li class="wp-first-item"><a class="wp-first-item" href="<?php  echo site_url('/admin/index.php?/user'); ?>">所有用户</a></li>
 		</ul>
 	</li>
 	
