@@ -35,7 +35,7 @@ class Login extends CI_Controller {
 					 	$_userPermission[] = $permissionConstant[$value];
 					 }
 					 $this->session->set_userdata(array('UserName' => $log, 'userId' => $row->id, 'userPermission' => json_encode($_userPermission)));
-					 redirect('admin/home');
+					 redirect('admin/index.php?/home');
 				}else{
 					$error_msg = 'password not correct';
 				}
