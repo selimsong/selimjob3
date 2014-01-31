@@ -29,6 +29,7 @@ $(document).ready(function(){
 		   <div class="container">
 	
 		<h3><?php echo $this->lang->line('Users');  ?></h3>
+		<?php var_dump($user); ?>
 		<div class="mainbox">
 			<form action="<?php echo  base_url();  ?>admin/user/delete"  method="post">
 				
