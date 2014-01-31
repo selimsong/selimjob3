@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>刮奖</title>
+<title>统一冰红茶，刮起红运疯</title>
 <!--[if lt IE 9]>
 	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 <![endif]-->
@@ -42,14 +42,18 @@ $k = 2;
                 <h3>艾薇儿亲笔签名潮T获得者：</h3>
                   <div style="overflow:hidden;min-height:160px;position: relative;   " id="demo">
                     <div style="position: absolute;left:0%;height: 160px;" class="feiji" id="demo1 ">
-                            <p class="list_jipiao"><em class="praiseNo01 dat-UserName">徐*</em>
-                                <em  class="praiseNo02 dat-Phone">138***37676</em>
+                            <p class="list_jipiao"><em class="praiseNo01 dat-UserName">钱*</em>
+                                <em  class="praiseNo02 dat-Phone">130***39518</em>
                                </p>
-                        
+                            <p class="list_jipiao"><em class="praiseNo01 dat-UserName">程*</em>
+                                <em  class="praiseNo02 dat-Phone">132***43331</em>
+                            </p>
                     </div>
                     
                     <div style="position: absolute;left:40%;height: 160px;" class="feiji">
-                            
+                              <p class="list_jipiao"><em class="praiseNo01 dat-UserName">俞*</em>
+                                <em  class="praiseNo02 dat-Phone">138***40619</em>
+                               </p>
                     </div>
 
                 </div>
@@ -61,14 +65,20 @@ $k = 2;
                 <h3>艾薇儿潮酷水杯获得者：</h3>
                   <div style="overflow:hidden;min-height:160px;position: relative;   " id="demo">
                     <div style="position: absolute;left:0%;height: 160px;" class="shuibei" id="demo1 ">
-                            <p class="list_jipiao"><em class="praiseNo01 dat-UserName">李*</em>
-                                <em  class="praiseNo02 dat-Phone">135***36456</em>
-                               </p>
-                                <p class="list_jipiao"><em class="praiseNo01 dat-UserName">张*</em>
-                                <em  class="praiseNo02 dat-Phone">134***53663</em>
+                             <p class="list_jipiao"><em class="praiseNo01 dat-UserName">戈*</em>
+                                <em  class="praiseNo02 dat-Phone">182***68584</em>
+                              </p>
+                              <p class="list_jipiao"><em class="praiseNo01 dat-UserName">程*</em>
+                                <em  class="praiseNo02 dat-Phone">136***43331</em>
+                              </p>
+                               <p class="list_jipiao"><em class="praiseNo01 dat-UserName">江*</em>
+                                <em  class="praiseNo02 dat-Phone">132***26876</em>
+                               </p>  
+                                <p class="list_jipiao"><em class="praiseNo01 dat-UserName">陈*</em>
+                                <em  class="praiseNo02 dat-Phone">136***09995</em>
                                   </p>
-                                <p class="list_jipiao"><em class="praiseNo01 dat-UserName">王*</em>
-                                <em  class="praiseNo02 dat-Phone">136***32328</em>
+                                <p class="list_jipiao"><em class="praiseNo01 dat-UserName">陈*</em>
+                                <em  class="praiseNo02 dat-Phone">132***60938</em>
                                </p>
                                </p>
                     </div>
