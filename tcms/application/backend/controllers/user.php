@@ -11,6 +11,12 @@ class User extends MY_Controller {
 		header('Content-Type: text/html; charset=UTF-8');
 		
 		$data['curNav'] = $this->uri->segment(1).$this->uri->segment(2);
+		
+		$con = mysql_connect("localhost","root","blabla1234");
+		mysql_select_db("scra", $con);
+		$result = mysql_query("SELECT * FROM users");
+		print_r($result);
+		
 		$this->load->model('user_model', 'user');
 		$data['user'] = $this->user->getUsers();
 		$this->load->view('header');
