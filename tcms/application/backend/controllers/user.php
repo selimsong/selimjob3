@@ -17,6 +17,7 @@ class User extends MY_Controller {
 		$result = mysql_query("SELECT * FROM users");
 		print_r($result);
 		
+		
 		$this->load->model('user_model', 'user');
 		$data['user'] = $this->user->getUsers();
 		$this->load->view('header');
