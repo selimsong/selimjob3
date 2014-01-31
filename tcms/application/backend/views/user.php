@@ -28,8 +28,7 @@ $(document).ready(function(){
 		<td valign="top">
 		   <div class="container">
 	
-		<h3><?php echo $this->lang->line('Users');  ?></h3>
-		<?php print_r($user); ?>
+		<h3>提交信息用户</h3>
 		<div class="mainbox">
 			<form action="<?php echo  base_url();  ?>admin/user/delete"  method="post">
 				
