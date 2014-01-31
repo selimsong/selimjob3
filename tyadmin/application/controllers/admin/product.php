@@ -60,6 +60,7 @@ class Product extends CI_Controller {
 				'pagestr'=>show_page($pagearr,$search),
 				'funcstr'=>$this->Purview_model->getFunc($this->tablefunc,$this->funcarr),
 		);
+		$this->output->enable_profiler(TRUE);
 		$this->load->view($this->tablefunc,$res);
 	}
 	
