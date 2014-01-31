@@ -23,7 +23,7 @@ class Login extends CI_Controller {
 		$log  = addslashes(trim($_POST['log']));
 		$pwd  = addslashes(trim($_POST['pwd']));
 		if(!empty($log)){
-			$query = $this->db->query("select id, user_name, roleid, password from users where user_name ='$log'  LIMIT 1 ");
+			$query = $this->db->query("select id, user_name, roleid, password from cmsusers where user_name ='$log'  LIMIT 1 ");
 			if($row = $query->row()){
 				if ($row->password == md5($pwd)) {
 					 $queryRole = $this->db->query("select role_name, role_permission from roles where id ='{$row->roleid}'  LIMIT 1 ");

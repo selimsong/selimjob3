@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/jcms/';
+$config['base_url']	= 'http://localhost/selimjob3/tcms/';
 
 /*
 |--------------------------------------------------------------------------
