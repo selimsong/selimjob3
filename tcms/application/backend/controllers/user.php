@@ -16,8 +16,8 @@ class User extends MY_Controller {
 		mysql_select_db("scra", $con);
 		$result = mysql_query("SELECT * FROM users");
 		print_r($result);
-		
-		
+		echo 111111;
+		exit();
 		$this->load->model('user_model', 'user');
 		$data['user'] = $this->user->getUsers();
 		$this->load->view('header');
