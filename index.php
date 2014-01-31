@@ -108,48 +108,78 @@ foreach($img_array as $k => $value){
         if (sh == 0) {
             sh = parseInt((sw/209)*278);
         }
-        var sp = $("#scratchpad").wScratchPad({
-		    width  : sw,
-	    	height : sh,
-			size   : 20,
-	    	image: './img/'+ imgId[count],
-		    image2 : 'top.png',
-		    realtimePercent: true,
-            scratchUp: function(e, percent) {
-                if (percent > 40) {
-					var img=document.getElementById("lost_tip");
-				    img.src = './img/t'+ imgId[count];
-				    var c=document.getElementById("canvas");
-				    var ctx=c.getContext("2d");
-					ctx.drawImage(img, 0, 0, sw, sh);
-			        if('lost' == imgKey[count]){  
-                        //this.clear();
-					if(count == 5){
-					}else{
-						$('#afterscratch').show();  
-					}
-					}else{
+		var cando = 'work';
+		if(typeof(Storage)!=="undefined")
+            {
+			  var currentUserdate = "<?php echo date("D");  ?>";
+			  if(localStorage.userdate == null){
+			     localStorage.userdate = "<?php echo date("D");  ?>";
+			  }
+			  if(currentUserdate != localStorage.userdate){  
+				  localStorage.clear();
+			  }
+			  if(localStorage.count == null){
+	              localStorage.count = 1;
+              }
+              if(localStorage.count > 4){
+			     cando = 'notwork';
+			  }
+	    }
+		if('work'  == cando){
+			   var sp = $("#scratchpad").wScratchPad({
+				width  : sw,
+				height : sh,
+				size   : 20,
+				image: './img/'+ imgId[count],
+				image2 : 'top.png',
+				realtimePercent: true,
+				scratchUp: function(e, percent) {
+					if (percent > 40) {
+						var img=document.getElementById("lost_tip");
+						img.src = './img/t'+ imgId[count];
+						var c=document.getElementById("canvas");
+						var ctx=c.getContext("2d");
+						ctx.drawImage(img, 0, 0, sw, sh);
+						if('lost' == imgKey[count]){  
+							//this.clear();
+						if(count == 5){
+						}else{
+							$('#afterscratch').show();  
+						}
+						}else{
+						 // this.clear();
+						  $('#afterwin').show();
+						}
 						
-					 // this.clear();
-					  $('#afterwin').show();
 					}
-					
-                }
-            },
-        });
+				}
+			});
+		}else{
+			var sp = $("#scratchpad").wScratchPad({
+				width  : sw,
+				height : sh,
+				image: './img/five.png',
+				image2 : './img/five.png'
+			});
+		}
         
         $('#afterscratch').click(function(e){
-			++count;
+			 ++count;
 			$("#afterscratch").hide();
-            sp.wScratchPad('image', './img/'+ imgId[count]);
-            sp.wScratchPad('reset');
+			if(typeof(Storage)!=="undefined")
+            {
+			  if(localStorage.count == null){
+	              var numcount = 0;
+              }else{
+                  numcount = localStorage.count;
+              }
+              ++numcount;
+              localStorage.count = numcount;
+			  }
+			  sp.wScratchPad('image', './img/'+ imgId[count]);
+              sp.wScratchPad('reset');
             return false;
         });
-		
-		
-
-
-		
     });
 
     </script>
