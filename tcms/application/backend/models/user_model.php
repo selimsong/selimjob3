@@ -13,6 +13,7 @@ class user_model  extends CI_Model{
 	
 	function getUsers(){
 		$query = $this->db->query("select * from users");
+		
 		return $query->result();
 	}
 	
