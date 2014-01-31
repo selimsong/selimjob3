@@ -91,12 +91,14 @@ $k = 2;
 
 var key = '<?php  echo $k; ?>';
 var uid = '<?php  echo $_SESSION['uid']; ?>';
+var say = 'work';
 $(".tijaio02").click(function () {
    if('' == $(".name").val()){
 	   alert("请输入您的姓名");
 	   return false;
 	}
-   
+    
+
     if('' == $(".tel").val()){
 	   alert("请输入您的电话号码");
 	   return false;
@@ -112,10 +114,17 @@ $(".tijaio02").click(function () {
 	   alert("请输入您的邮寄地址");
 	   return false;
 	}
-   
+     
+	if('work' != say){
+	   alert("您的个人信息已经提交成功了！");
+	   return false;
+	}
+
+
    $.post( "data.php", { name: $(".name").val(), phone: $(".tel").val(), email: $(".email").val(), address: $(".address").val(), wkey: key, uid: uid  })
      .done(function( data ) {
-           alert("提交信息成功！");
+	    say = 'unwork';
+           alert("您的个人信息已经提交成功了！");
    });
  
    
