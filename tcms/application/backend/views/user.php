@@ -48,11 +48,11 @@ $(document).ready(function(){
 					   foreach ($user as $value){
 					?>
 					   <tr>
-							<td class="option"><input type="checkbox" name="delete[]" value="<?php echo $value->id; ?>" class="mycheck" /></td>
+							<td class="option"><input type="checkbox" name="delete[]" value="<?php echo $value['id']; ?>" class="mycheck" /></td>
 							<td> <strong><?php echo $value['name'];  ?></strong></td>
-							<td><?php echo $value->phone;  ?></td>
-							<td><?php echo $value->email;  ?></td>
-							<td><a href="<?php  echo site_url('/admin/user/edit/' . $value->id); ?>">edit</a></td>
+							<td><?php echo $value['phone'];  ?></td>
+							<td><?php echo $value['email'];  ?></td>
+							
 						</tr>
 				  <?php }  ?>				
 					  <tr class="nobg">
