@@ -7,7 +7,7 @@
 	</head>
 	<body>
 		<div id="container">
-			<form name="loginform" action="<?php  echo site_url('/admin/login/validate'); ?>" method="post">
+			<form name="loginform" action="<?php  echo site_url('/admin/index.php?/login/validate'); ?>" method="post">
 				<div class="login">LOGIN</div>
 				<div class="username-text">Username:</div>
 				<div class="password-text">Password:</div>
