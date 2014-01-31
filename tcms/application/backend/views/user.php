@@ -50,7 +50,13 @@ $(document).ready(function(){
 					   <tr>
 							<td class="option"><input type="checkbox" name="delete[]" value="<?php echo $value['id']; ?>" class="mycheck" /></td>
 							<td> <strong><?php echo $value['name'];  ?></strong></td>
-							<td> <strong><?php echo base64_decode($value['wintype']);  ?></strong></td>
+							<td> <strong><?php
+                            $type = substr(base64_decode($value['wintype']), 0,3);
+                            
+							echo $type; 
+
+							
+							?></strong></td>
 							<td><?php echo $value['phone'];  ?></td>
 							<td><?php echo $value['email'];  ?></td>
 							<td><?php echo $value['address'];  ?></td>
