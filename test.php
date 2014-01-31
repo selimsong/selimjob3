@@ -1,47 +1,19 @@
 <?php
+header("Content-type: text/html; charset=utf-8");
+$con = mysql_connect("localhost","root","blabla1234");
+mysql_select_db("scra", $con);
 
-echo date("G");
-
-echo "<br /><br /><br />";
-
-echo date("D");
-
-
-exit();
-?>
+$win1_key = base64_encode('wia'.date('l'));
+$win2_key = base64_encode('wib'.date('l'));
 
 
-<!DOCTYPE html>
-<html>
-<body>
 
-<div id="result"></div>
-<script>
+$result = mysql_query("SELECT * FROM users");
 
-
-if(typeof(Storage)!=="undefined")
+while($row = mysql_fetch_array($result))
   {
-  if(localStorage.count == null){
-	  var numcount = 0;
-  }else{
-    numcount = localStorage.count;
-  }
-  ++numcount;
-  localStorage.count = numcount;
-   
-   console.log(localStorage.count);
-
-   //alert(localStorage.count);
-
- // localStorage.lastname ="Smith" + localStorage.count;
-  //document.getElementById("result").innerHTML="Last name: " + localStorage.lastname;
-     //localStorage.clear();
+   var_dump($base64_decode(row['wintype']));
+  echo "<br />";
   }
 
-
-
-
-</script>
-
-</body>
-</html>
+mysql_close($con);
