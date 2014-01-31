@@ -12,9 +12,23 @@ $result = mysql_query("SELECT * FROM users");
 
 while($row = mysql_fetch_array($result))
  {
-   var_dump($row);
-   var_dump(base64_decode($row['wintype']));
-    echo "<br />";
+  $winType =  $row['wintype'];
+  $dtime = $row['createtime'];
+  $d_a  = 'wia'.date('l', $dtime);
+  $d_b  = 'wib'.date('l', $dtime);
+  if(md5($d_a ) == $winType){
+      var_dump($row['id']);
+      var_dump($row['wintype']);
+	  echo 'a';
+   }
+    
+   if(md5($d_b) == $winType){
+      var_dump($row['id']);
+      var_dump($row['wintype']);
+	  echo 'b';
+   }
+
+    echo "<br /><br /><br />";
   }
 
 mysql_close($con);
