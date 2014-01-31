@@ -54,9 +54,9 @@ $active_record = TRUE;
 //$db['default']['database']='lishi';
 
 $db['default']['hostname']='127.0.0.1';
-$db['default']['username']='weiboapp_f';
-$db['default']['password']='weiboapp2013';
-$db['default']['database']='weiboapp';
+$db['default']['username']='root';
+$db['default']['password']='blabla1234';
+$db['default']['database']='scra';
 $db['default']['dbdriver']='mysql';
 $db['default']['dbprefix']='lee_';
 $db['default']['pconnect']=FALSE;
