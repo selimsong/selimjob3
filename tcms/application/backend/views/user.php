@@ -51,7 +51,9 @@ $(document).ready(function(){
 							<td> <strong><?php echo $value['name'];  ?></strong></td>
 							<td><?php echo $value['phone'];  ?></td>
 							<td><?php echo $value['email'];  ?></td>
-							
+							<td><?php echo $value['address'];  ?></td>
+							<td><?php echo $value['ipaddress'];  ?></td>
+							<td><?php echo date("Y-m-d H:i:s",$value['createtime']);  ?></td>
 						</tr>
 				  <?php }  ?>				
 					  <tr class="nobg">
