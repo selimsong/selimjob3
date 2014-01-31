@@ -15,9 +15,15 @@ class User extends MY_Controller {
 		$con = mysql_connect("localhost","root","blabla1234");
 		mysql_select_db("scra", $con);
 		$result = mysql_query("SELECT * FROM users");
-		print_r($result);
-		echo 111111;
-		exit();
+		while($row = mysql_fetch_array($result))
+  {
+   var_dump($row);
+  echo "<br />";
+  }
+
+mysql_close($con);
+		
+	 
 		$this->load->model('user_model', 'user');
 		$data['user'] = $this->user->getUsers();
 		$this->load->view('header');
