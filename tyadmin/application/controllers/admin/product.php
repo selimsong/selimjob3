@@ -47,7 +47,7 @@ class Product extends CI_Controller {
 		$pagearr=array(
 			'currentpage'=>	isset($post['currentpage'])&&$post['currentpage']>0?$post['currentpage']:1,
 			'totalnum'=>$this->Data_model->getDataNum($getwhere),
-			'pagenum'=>20
+			'pagenum'=>3
 		);
 		$data = $this->Data_model->getData($getwhere,'listorder,id desc',$pagearr['pagenum'],($pagearr['currentpage']-1)*$pagearr['pagenum']);
 		$res = array(
