@@ -10,7 +10,7 @@ for($i=1; $i<=$shuibei[$date]; $i++){
 	$file = './jiang/'.$i."shui.txt";
 	if(file_exists($file)){
 	  $rate = 1;
-	  unlink($file);
+	  //unlink($file);
 	  break;
 	}
 }
@@ -18,7 +18,7 @@ for($i=1; $i<=$shuibei[$date]; $i++){
 if(51<$randA && $randA<54){
 if(file_exists($tfile)){
   $rate = 2;
-  unlink($tfile);
+  //unlink($tfile);
 }
 }
 
