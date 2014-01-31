@@ -68,6 +68,7 @@ class Data_model extends CI_Model
 		if($pagenum>0){
 			$this->db->limit($pagenum,$exnum);
 		}
+		echo $table;
 		$data = $this->db->get($table)->result_array();
 		return $data;
 	}

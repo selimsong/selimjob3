@@ -20,6 +20,7 @@ class Product extends CI_Controller {
 	}
 	
 	public function index(){
+		
 		$this->Purview_model->checkPurview($this->tablefunc);
 		$post = $this->input->post(NULL,TRUE);
 		$getwhere = array();
