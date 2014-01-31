@@ -36,7 +36,11 @@ $(document).ready(function(){
 					<tr>
 						<th><input id="CheckAll" type="checkbox" /> <label> delete</label></th>
 						<th>user name</th>
+						<th>phone</th>
 						<th>email</th>
+						<th>用户地址</th>
+						<th>ip地址</th>
+						<th>创建时间</th>
 						<th>Edit</th>
 					</tr>
 					<?php
@@ -44,7 +48,8 @@ $(document).ready(function(){
 					?>
 					   <tr>
 							<td class="option"><input type="checkbox" name="delete[]" value="<?php echo $value->id; ?>" class="mycheck" /></td>
-							<td> <strong><?php echo $value->user_name;  ?></strong></td>
+							<td> <strong><?php echo $value->name;  ?></strong></td>
+							<td><?php echo $value->phone;  ?></td>
 							<td><?php echo $value->email;  ?></td>
 							<td><a href="<?php  echo site_url('/admin/user/edit/' . $value->id); ?>">edit</a></td>
 						</tr>
