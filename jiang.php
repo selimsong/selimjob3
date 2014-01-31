@@ -1,5 +1,5 @@
 <?php
-$shuibei = array(30=>10, 31=>7, 1=>7, 2=>7);
+$shuibei = array(30=>10, 31=>11, 1=>7, 2=>7);
 $shirt   =1;
 $tfile = './jiang/t.txt';
 $date = date('d');
