@@ -14,9 +14,10 @@ while($row = mysql_fetch_array($result))
  {
   $winType =  $row['wintype'];
   $dtime = $row['createtime'];
-  echo $winType, $dtime;
+  
   $d_a  = 'wia'.date('l', $dtime);
   $d_b  = 'wib'.date('l', $dtime);
+  echo $winType, $dtime,$d_b;
   if(md5($d_a) == $winType){
       var_dump($row);
       var_dump($row['wintype']);
