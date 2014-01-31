@@ -11,9 +11,10 @@ $win2_key = base64_encode('wib'.date('l'));
 $result = mysql_query("SELECT * FROM users");
 
 while($row = mysql_fetch_array($result))
-  {
-   var_dump(base64_decode(row['wintype']));
-  echo "<br />";
+ {
+   var_dump($row);
+   var_dump(base64_decode($row['wintype']));
+    echo "<br />";
   }
 
 mysql_close($con);
