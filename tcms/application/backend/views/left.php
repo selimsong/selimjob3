@@ -17,7 +17,11 @@ $userPer = json_decode($this->session->userdata('userPermission'));
 			<div class="wp-menu-name">用户管理</div>
 		</a>
 		<ul class="wp-submenu wp-submenu-wrap">
-			<li class="wp-submenu-head">Users</li>
+			<li class="wp-submenu-head">获奖用户</li>
+			<li class="wp-first-item"><a class="wp-first-item" href="<?php  echo site_url('/admin/index.php?/user'); ?>">All Users</a></li>
+		</ul>
+		<ul class="wp-submenu wp-submenu-wrap">
+			<li class="wp-submenu-head">所有用户</li>
 			<li class="wp-first-item"><a class="wp-first-item" href="<?php  echo site_url('/admin/index.php?/user'); ?>">All Users</a></li>
 		</ul>
 	</li>
