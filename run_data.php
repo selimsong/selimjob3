@@ -15,7 +15,7 @@ while($row = mysql_fetch_array($result))
         $shuibei[] = array('name'=>utf8Substr($row['name'],0,1), 'phone' => substr($row['phone'],0,3).'***'.substr($row['phone'],-5));      
        }
       if('wib' == $type){
-           $tshirt[] = array('name'=>utf8Substr($row['name'],0,1), 'phone' => substr($row['phone'],0,3).'***'.substr($row['phone'],-5));   
+          $tshirt[] = array('name'=>utf8Substr($row['name'],0,1), 'phone' => substr($row['phone'],0,3).'***'.substr($row['phone'],-5));   
        }
 }
 

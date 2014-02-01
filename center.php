@@ -65,22 +65,20 @@ $k = 2;
                 <h3>艾薇儿潮酷水杯获得者：</h3>
                   <div style="overflow:hidden;min-height:160px;position: relative;   " id="demo">
                     <div style="position: absolute;left:0%;height: 160px;" class="shuibei" id="demo1 ">
-                             <p class="list_jipiao"><em class="praiseNo01 dat-UserName">戈*</em>
-                                <em  class="praiseNo02 dat-Phone">182***68584</em>
-                              </p>
-                              <p class="list_jipiao"><em class="praiseNo01 dat-UserName">程*</em>
-                                <em  class="praiseNo02 dat-Phone">136***43331</em>
-                              </p>
-                               <p class="list_jipiao"><em class="praiseNo01 dat-UserName">江*</em>
-                                <em  class="praiseNo02 dat-Phone">132***26876</em>
-                               </p>  
-                                <p class="list_jipiao"><em class="praiseNo01 dat-UserName">陈*</em>
-                                <em  class="praiseNo02 dat-Phone">136***09995</em>
-                                  </p>
-                                <p class="list_jipiao"><em class="praiseNo01 dat-UserName">陈*</em>
-                                <em  class="praiseNo02 dat-Phone">132***60938</em>
-                               </p>
-                               </p>
+<p class="list_jipiao"><em class="praiseNo01 dat-UserName">程*</em><em  class="praiseNo02 dat-Phone">135***61035</em></p>
+<p class="list_jipiao"><em class="praiseNo01 dat-UserName">姚*</em><em  class="praiseNo02 dat-Phone">151***87393</em></p>
+<p class="list_jipiao"><em class="praiseNo01 dat-UserName">刘*</em><em  class="praiseNo02 dat-Phone">137***19881</em></p>
+<p class="list_jipiao"><em class="praiseNo01 dat-UserName">熊*</em><em  class="praiseNo02 dat-Phone">139***84645</em></p>
+<p class="list_jipiao"><em class="praiseNo01 dat-UserName">于*</em><em  class="praiseNo02 dat-Phone">158***88560</em></p>
+<p class="list_jipiao"><em class="praiseNo01 dat-UserName">J*</em><em  class="praiseNo02 dat-Phone">137***76505</em></p>
+<p class="list_jipiao"><em class="praiseNo01 dat-UserName">倪*</em><em  class="praiseNo02 dat-Phone">135***11953</em></p>
+<p class="list_jipiao"><em class="praiseNo01 dat-UserName">章*</em><em  class="praiseNo02 dat-Phone">138***41502</em></p>
+<p class="list_jipiao"><em class="praiseNo01 dat-UserName">于*</em><em  class="praiseNo02 dat-Phone">133***59005</em></p>
+<p class="list_jipiao"><em class="praiseNo01 dat-UserName">戈*</em><em  class="praiseNo02 dat-Phone">182***68584</em></p>
+<p class="list_jipiao"><em class="praiseNo01 dat-UserName">程*</em><em  class="praiseNo02 dat-Phone">136***43331</em></p>
+<p class="list_jipiao"><em class="praiseNo01 dat-UserName">江*</em><em  class="praiseNo02 dat-Phone">132***26876</em></p>
+<p class="list_jipiao"><em class="praiseNo01 dat-UserName">陈*</em><em  class="praiseNo02 dat-Phone">136***09995</em></p>
+<p class="list_jipiao"><em class="praiseNo01 dat-UserName">陈*</em><em  class="praiseNo02 dat-Phone">132***60938</em></p>
                     </div>
                     
               
