@@ -53,9 +53,9 @@ $(document).ready(function(){
 							<td> <strong><?php
                             $type = substr(base64_decode($value['wintype']), 0,3);
                             if('wia' == $type){
-                            	echo "获得水杯";
+                            	echo "获水杯";
                             }elseif ('wib' == $type){
-                            	echo '获得T';
+                            	echo '获T';
                             }
 							?></strong></td>
 							<td><?php echo $value['phone'];  ?></td>
