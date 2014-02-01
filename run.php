@@ -1,6 +1,6 @@
 <?php
 
-$shuibei = array('30'=>10, '31'=>11, '01'=>7, '02'=>7);
+$shuibei = array('30'=>10, '31'=>11, '01'=>1, '02'=>7);
 $date = date('d');
 
 echo $shuibei[$date];
@@ -11,3 +11,4 @@ chmod($file, 0777);
 }
 
 touch('./jiang/t.txt');
+chmod('./jiang/t.txt', 0777);
