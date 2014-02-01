@@ -1,3 +1,3 @@
 <?php
-$file = './jiang/1shui.txt";
+$file = './jiang/1shui.txt';
 unlink($file);
