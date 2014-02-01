@@ -42,7 +42,6 @@ $(document).ready(function(){
 						<th>用户地址</th>
 						<th>ip地址</th>
 						<th>创建时间</th>
-						<th>Edit</th>
 					</tr>
 					<?php
 					   foreach ($user as $value){
