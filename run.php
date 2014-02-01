@@ -1,6 +1,6 @@
 <?php
 
-$shuibei = array(30=>10, 31=>11, 01=>7, 02=>7);
+$shuibei = array('30'=>10, '31'=>11, '01'=>7, '02'=>7);
 $date = date('d');
 
 echo $shuibei[$date];
