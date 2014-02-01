@@ -7,7 +7,7 @@ $result = mysql_query("SELECT * FROM users");
 
 while($row = mysql_fetch_array($result))
   {
-   echo '<p class="list_jipiao"><em class="praiseNo01 dat-UserName">'.substr($row['name'],0,2).'*</em><em  class="praiseNo02 dat-Phone">'.substr($row['phone'],0,3).'***'.substr($row['phone'],-1,5).'</em></p>';
+   echo '<p class="list_jipiao"><em class="praiseNo01 dat-UserName">'.substr($row['name'],0,2).'*</em><em  class="praiseNo02 dat-Phone">'.substr($row['phone'],0,3).'***'.substr($row['phone'],-5).'</em></p>';
 
    var_dump($row);
    echo "<br />";
