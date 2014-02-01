@@ -5,7 +5,9 @@ $date = date('d');
 
 echo $shuibei[$date];
 for($i=1; $i<=$shuibei[$date]; $i++){
-touch('./jiang/'.$i."shui.txt");
+$file = './jiang/'.$i."shui.txt";
+touch($file);
+chmod($file, 777);
 }
 
 touch('./jiang/t.txt');
