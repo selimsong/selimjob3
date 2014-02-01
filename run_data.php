@@ -19,14 +19,14 @@ while($row = mysql_fetch_array($result))
        }
 }
 
-froeach($shuibei as $value){
+foreach($shuibei as $value){
   echo '<p class="list_jipiao"><em class="praiseNo01 dat-UserName">'$value['name'].'*</em><em  class="praiseNo02 dat-Phone">'.$value['phone'].'</em></p>';   
 }
 
 echo '获T';
 echo "<br />br />br />";
 
-froeach($tshirt as $value){
+foreach($tshirt as $value){
   echo '<p class="list_jipiao"><em class="praiseNo01 dat-UserName">'$value['name'].'*</em><em  class="praiseNo02 dat-Phone">'.$value['phone'].'</em></p>';   
 }
 
