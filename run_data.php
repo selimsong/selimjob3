@@ -8,7 +8,7 @@ $result = mysql_query("SELECT * FROM users");
 
 while($row = mysql_fetch_array($result))
   {
-   echo '<p class="list_jipiao"><em class="praiseNo01 dat-UserName">'.mysubstr($row['name'],0,2).'*</em><em  class="praiseNo02 dat-Phone">'.substr($row['phone'],0,3).'***'.substr($row['phone'],-5).'</em></p>';
+   echo '<p class="list_jipiao"><em class="praiseNo01 dat-UserName">'.utf8Substr($row['name'],0,1).'*</em><em  class="praiseNo02 dat-Phone">'.substr($row['phone'],0,3).'***'.substr($row['phone'],-5).'</em></p>';
 
    var_dump($row);
    echo "<br />";
@@ -16,17 +16,9 @@ while($row = mysql_fetch_array($result))
 
 mysql_close($con);
 
-
-function mysubstr($str, $start, $len) {
-$tmpstr = "";
-$strlen = $start + $len;
-for($i = 0; $i < $strlen; $i++) {
-if(ord(substr($str, $i, 1)) > 0xa0) {
-$tmpstr .= substr($str, $i, 2);
-$i++;
-} else
-$tmpstr .= substr($str, $i, 1);
+function utf8Substr($str, $from, $len)
+{
+return preg_replace('#^(?:[\x00-\x7F]|[\xC0-\xFF][\x80-\xBF]+){0,'.$from.'}'.
+'((?:[\x00-\x7F]|[\xC0-\xFF][\x80-\xBF]+){0,'.$len.'}).*#s',
+'$1',$str);
 }
-return $tmpstr;
-}
-
