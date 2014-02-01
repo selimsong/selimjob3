@@ -14,7 +14,7 @@ class User extends MY_Controller {
 		
 		$con = mysql_connect("localhost","root","blabla1234");
 		mysql_select_db("scra", $con);
-		$result = mysql_query("SELECT * FROM users");
+		$result = mysql_query("SELECT * FROM users order by createtime desc");
 		$user = array();
 		while($row = mysql_fetch_array($result))
         {
@@ -36,7 +36,7 @@ class User extends MY_Controller {
 	
 		$con = mysql_connect("localhost","root","blabla1234");
 		mysql_select_db("scra", $con);
-		$result = mysql_query("SELECT * FROM users where wintype !=1");
+		$result = mysql_query("SELECT * FROM users where wintype !=1 order by createtime desc");
 		$user = array();
 		while($row = mysql_fetch_array($result))
 		{
