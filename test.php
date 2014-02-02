@@ -10,6 +10,7 @@ for($i=1; $i<=$shuibei[$date]; $i++){
 	$file = './jiang/'.$i."shui.txt";
 	if(file_exists($file)){
 	  $rate = 1;
+	  echo 'get it';
 	  //unlink($file);
 	  break;
 	}
