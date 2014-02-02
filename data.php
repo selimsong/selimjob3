@@ -10,7 +10,7 @@ if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
     $ip = $_SERVER['REMOTE_ADDR'];
 }
 
-$shuibei = array(30=>10, 31=>11, 1=>7, 2=>7);
+$shuibei = array('30'=>10, '31'=>11, '01'=>1, '02'=>7);
 $tfile = './jiang/t.txt';
 $date = date('d');
 $type = substr(base64_decode($_POST['wkey']), 0,3);
