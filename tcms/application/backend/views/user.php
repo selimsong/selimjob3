@@ -34,7 +34,7 @@ $(document).ready(function(){
 				
 				<table class="datalist fixwidth">
 					<tr>
-						<th><input id="CheckAll" type="checkbox" /> <label> delete</label></th>
+						<th><label>id</label></th>
 						<th>user name</th>
 						<th>获奖类型</th>
 						<th>phone</th>
@@ -44,12 +44,13 @@ $(document).ready(function(){
 						<th>创建时间</th>
 					</tr>
 					<?php
+					   $uCount = count($user);
 					   foreach ($user as $value){
 					?>
 					   <tr>
-							<td class="option"><input type="checkbox" name="delete[]" value="<?php echo $value['id']; ?>" class="mycheck" /></td>
-							<td> <strong><?php echo $value['name'];  ?></strong></td>
-							<td> <strong><?php
+							<td class="option"><?php echo $uCount;  $uCount--; ?></td>
+							<td><strong><?php echo $value['name'];  ?></strong></td>
+							<td><strong><?php
                             $type = substr(base64_decode($value['wintype']), 0,3);
                             if('wia' == $type){
                             	echo "获水杯";
