@@ -3,7 +3,7 @@ $shuibei = array('02'=>7, '03'=>7, '04'=>7, '05'=>7, '06' => 7, '07'=>7, '08'=>7
 $shirt   =1;
 $tfile = './jiang/t.txt';
 $date = date('d');
-$randA = rand(1, 200);
+$randA = rand(1, 400);
 $rate = 3;
 if($randA> 21 && $randA<30 ){
 for($i=1; $i<=$shuibei[$date]; $i++){
