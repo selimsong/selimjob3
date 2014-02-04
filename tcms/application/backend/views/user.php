@@ -34,7 +34,7 @@ $(document).ready(function(){
 				
 				<table class="datalist fixwidth">
 					<tr>
-						<th><label>id</label></th>
+						<th>id: </th>
 						<th>user name</th>
 						<th>获奖类型</th>
 						<th>phone</th>
