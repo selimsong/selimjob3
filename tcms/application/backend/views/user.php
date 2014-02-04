@@ -46,23 +46,26 @@ $(document).ready(function(){
 					<?php
 					   $uCount = count($user);
 					   foreach ($user as $value){
-					?>
-					   <tr>
-							<td class="option"><?php echo $uCount;  $uCount--; ?></td>
-							<td><strong><?php echo $value['name'];  ?></strong></td>
-							<td><strong><?php
+				            $winT = $style = '';
                             $type = substr(base64_decode($value['wintype']), 0,3);
                             if('wia' == $type){
-                            	echo "获水杯";
+                            	$winT ="获水杯";
                             }elseif ('wib' == $type){
-                            	echo '获T';
+                            	$winT ='获T';
+								$style = 'style="background-color:yellow"';
                             }
-							?></strong></td>
-							<td><?php echo $value['phone'];  ?></td>
-							<td><?php echo $value['email'];  ?></td>
-							<td><?php echo $value['address'];  ?></td>
-							<td><?php echo $value['ipaddress'];  ?></td>
-							<td><?php echo date("Y-m-d H:i:s",$value['createtime']);  ?></td>
+					?>
+					   <tr>
+							<td class="option" <?php echo $style; ?>><?php echo $uCount;  $uCount--; ?></td>
+							<td <?php echo $style; ?>><strong><?php echo $value['name'];  ?></strong></td>
+							<td <?php echo $style; ?>><strong>
+							 <?php echo $winT ?>
+							</strong></td>
+							<td <?php echo $style; ?>><?php echo $value['phone'];  ?></td>
+							<td <?php echo $style; ?>><?php echo $value['email'];  ?></td>
+							<td <?php echo $style; ?>><?php echo $value['address'];  ?></td>
+							<td <?php echo $style; ?>><?php echo $value['ipaddress'];  ?></td>
+							<td <?php echo $style; ?>><?php echo date("Y-m-d H:i:s",$value['createtime']);  ?></td>
 						</tr>
 				  <?php }  ?>				
 					  <tr class="nobg">
