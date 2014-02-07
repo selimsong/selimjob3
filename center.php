@@ -103,12 +103,13 @@ $(".tijaio02").click(function () {
 	if('work' != say){
 	   alert("您的个人信息已经提交成功了！");
 	   return false;
+	}else{
+	   $.post( "data.php", { name: $(".name").val(), phone: $(".tel").val(), email: $(".email").val(), address: $(".address").val(), wkey: key, uid: uid  })
+		 .done(function( data ) {
+			say = 'unwork';
+			   alert("您的个人信息已经提交成功了");
+	   });
 	}
-   $.post( "data.php", { name: $(".name").val(), phone: $(".tel").val(), email: $(".email").val(), address: $(".address").val(), wkey: key, uid: uid  })
-     .done(function( data ) {
-	    say = 'unwork';
-           alert("您的个人信息已经提交成功了");
-   });
 });
 function goToMarquee(selector) {
 var speed = 50;
