@@ -32,50 +32,35 @@ foreach($user as $r => $dataRow) {
         'bottom' => array(
             'style' => PHPExcel_Style_Border::BORDER_THIN,
             'color' => array(
-                'rgb' => 'c0c0c0'
-            )
-        ),
+                'rgb' => 'c0c0c0')),
         'right' => array(
             'style' => PHPExcel_Style_Border::BORDER_THIN,
             'color' => array(
-                'rgb' => 'c0c0c0'
-            )
-        )
-    ),
-			'fill' => array(
+                'rgb' => 'c0c0c0'))),
+		'fill' => array(
 			'type' => PHPExcel_Style_Fill::FILL_SOLID,
 			'startcolor' => array(
-					'rgb' => 'ffffff',
-			)));
+					'rgb' => 'ffffff')));
 	if('wia' == $type){
 		$winT ="水杯";
 		//$objPHPExcel->getActiveSheet()->getStyle('A'.$row.':H'.$row)->getFill()->setFillType(PHPExcel_Style_Fill::BORDER_THIN);
 	}elseif ('wib' == $type){
 		$winT ='T';
-		$yStyle = array(
-    'borders' => array(
-        'bottom' => array(
-            'style' => PHPExcel_Style_Border::BORDER_THIN,
-            'color' => array(
-                'rgb' => 'c0c0c0'
-            )
-        ),
+		$yStyle = array('borders' => array(
+	        'bottom' => array(
+	            'style' => PHPExcel_Style_Border::BORDER_THIN,
+	            'color' => array(
+	                'rgb' => 'c0c0c0')),
         'right' => array(
             'style' => PHPExcel_Style_Border::BORDER_THIN,
             'color' => array(
                 'rgb' => 'c0c0c0'
-            )
-        )
-    ),
-    'fill' => array(
+            ))),
+       'fill' => array(
         'type' => PHPExcel_Style_Fill::FILL_SOLID,
         'startcolor' => array(
             'rgb' => 'FFDD00',
-        ),
-    ),
-);
-	//$objPHPExcel->getActiveSheet()->getStyle('A'.$row.':H'.$row)->getFill()->setFillType(PHPExcel_Style_Fill::FILL_SOLID);
-	//$objPHPExcel->getActiveSheet()->getStyle('A'.$row.':H'.$row)->getFill()->getStartColor()->setRGB('FFDD00');
+        )));
 	}
 	
 	$objPHPExcel->getActiveSheet()->getStyle('A'.$row.':H'.$row)->applyFromArray($yStyle);
