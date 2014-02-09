@@ -35,6 +35,7 @@ foreach($user as $r => $dataRow) {
 			)));
 	if('wia' == $type){
 		$winT ="水杯";
+		$objPHPExcel->getActiveSheet()->getStyle('A'.$row.':H'.$row)->getFill()->setFillType(PHPExcel_Style_Fill::BORDER_THIN);
 	}elseif ('wib' == $type){
 		$winT ='T';
 		$yStyle = array('fill' => array(
