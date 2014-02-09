@@ -20,13 +20,7 @@ while($row = mysql_fetch_array($result))
 $user[] = $row;
 }
 mysql_close($con);
-$yStyle = array(
-		'fill' => array(
-				'type' => PHPExcel_Style_Fill::FILL_SOLID,
-				'startcolor' => array(
-						'rgb' => 'FFDD00',
-				))
-);
+
 $objPHPExcel->getActiveSheet()->setCellValue('D1', PHPExcel_Shared_Date::PHPToExcel(time()));
 $baseRow = 5;
 foreach($user as $r => $dataRow) {
@@ -36,10 +30,20 @@ foreach($user as $r => $dataRow) {
 	$objPHPExcel->getActiveSheet()->insertNewRowBefore($row,1);
 	if('wia' == $type){
 		$winT ="水杯";
+		$yStyle = array('fill' => array(
+				'type' => PHPExcel_Style_Fill::FILL_SOLID,
+				'startcolor' => array(
+						'rgb' => 'ffffff',
+				)));
 	}elseif ('wib' == $type){
 		$winT ='T';
-		$objPHPExcel->getActiveSheet()->getStyle('A'.$row.':B'.$row)->applyFromArray($yStyle);
+		$yStyle = array('fill' => array(
+				'type' => PHPExcel_Style_Fill::FILL_SOLID,
+				'startcolor' => array(
+						'rgb' => 'FFDD00',
+				)));
 	}
+	$objPHPExcel->getActiveSheet()->getStyle('A'.$row.':B'.$row)->applyFromArray($yStyle);
 	$objPHPExcel->getActiveSheet()->setCellValue('A'.$row, $r+1)
 								  ->setCellValue('B'.$row, $dataRow['name'])
 								  ->setCellValue('C'.$row, $winT)
@@ -48,8 +52,6 @@ foreach($user as $r => $dataRow) {
 								  ->setCellValue('F'.$row, $dataRow['address'])
 								  ->setCellValue('G'.$row, date("Y-m-d H:i:s",$dataRow['createtime']))
 								  ->setCellValue('H'.$row, $dataRow['ipaddress']);    
-
-
 }
 
 $objPHPExcel->getActiveSheet()->removeRow($baseRow-1,1);
