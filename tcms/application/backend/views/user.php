@@ -28,7 +28,8 @@ $(document).ready(function(){
 		<td valign="top">
 		   <div class="container">
 	
-		<h3>提交信息用户</h3>&nbsp;&nbsp;&nbsp;<a href="<?php echo  base_url();  ?>excel/get.php">点击下载Excel数据</a>
+		<h3>提交信息用户</h3>
+		<a href="<?php echo  base_url();  ?>excel/get.php">点击下载Excel数据</a>
 		<div class="mainbox">
 			<form action="<?php echo  base_url();  ?>admin/user/delete"  method="post">
 				
