@@ -21,7 +21,7 @@ $user[] = $row;
 }
 mysql_close($con);
 
-$objPHPExcel->getActiveSheet()->setCellValue('D1', PHPExcel_Shared_Date::PHPToExcel(time()));
+$objPHPExcel->getActiveSheet()->setCellValue('E1', PHPExcel_Shared_Date::PHPToExcel(time()));
 $baseRow = 5;
 foreach($user as $r => $dataRow) {
 	$winT= null;
