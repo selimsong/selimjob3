@@ -5,13 +5,11 @@ ini_set('display_startup_errors', TRUE);
 
 define('EOL',(PHP_SAPI == 'cli') ? PHP_EOL : '<br />');
 
-
-/** PHPExcel_IOFactory */
+require_once '../Classes/PHPExcel.php';
 require_once '../Classes/PHPExcel/IOFactory.php';
 
 $objReader = PHPExcel_IOFactory::createReader('Excel5');
 $objPHPExcel = $objReader->load("win.xls");
-
 
 $con = mysql_connect("localhost","root","blabla1234");
 mysql_select_db("scra", $con);
@@ -35,21 +33,7 @@ foreach($user as $r => $dataRow) {
 	}
 	$row = $baseRow + $r;
 	$objPHPExcel->getActiveSheet()->insertNewRowBefore($row,1);
-
-	$objPHPExcel->getActiveSheet()->getStyle('A')->getFill()->getStartColor()->setRGB('FFFF00'); 
-
 	
-	
-	
-	/**
-	                              ->getStyle('B')->getFont()->getColor()->applyFromArray(array('rgb' => 'red'))
-	                              ->getStyle('C')->getFont()->getColor()->applyFromArray(array('rgb' => 'red'))
-	                              ->getStyle('D')->getFont()->getColor()->applyFromArray(array('rgb' => 'red'))
-	                              ->getStyle('E')->getFont()->getColor()->applyFromArray(array('rgb' => 'red'))
-	                              ->getStyle('F')->getFont()->getColor()->applyFromArray(array('rgb' => 'red'))
-	                              ->getStyle('G')->getFont()->getColor()->applyFromArray(array('rgb' => 'red'))
-	                              ->getStyle('H')->getFont()->getColor()->applyFromArray(array('rgb' => 'red'));
-	**/
 	$objPHPExcel->getActiveSheet()->setCellValue('A'.$row, $r+1)
 								  ->setCellValue('B'.$row, $dataRow['name'])
 								  ->setCellValue('C'.$row, $winT)
@@ -57,9 +41,8 @@ foreach($user as $r => $dataRow) {
 								  ->setCellValue('E'.$row, $dataRow['email'])
 								  ->setCellValue('F'.$row, $dataRow['address'])
 								  ->setCellValue('G'.$row, date("Y-m-d H:i:s",$dataRow['createtime']))
-								  ->setCellValue('H'.$row, $dataRow['ipaddress']);
-	
-
+								  ->setCellValue('H'.$row, $dataRow['ipaddress']);    
+	$objPHPExcel->getActiveSheet()->getStyle('A'.$row.':B'.$row)->applyFromArray($redstyle);
 
 }
 
@@ -67,5 +50,17 @@ $objPHPExcel->getActiveSheet()->removeRow($baseRow-1,1);
 
 
 $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5');
-$objWriter->save('test.xls');
+//$objWriter->save('test.xls');
+
+// Redirect output to a client’s web browser (Excel5)
+header('Content-Type: application/vnd.ms-excel');
+header('Content-Disposition: attachment;filename="2014-ty.xls"');
+header('Cache-Control: max-age=0');
+header('Cache-Control: max-age=1');
+header ('Expires: Mon, 26 Jul 1997 05:00:00 GMT'); // Date in the past
+header ('Last-Modified: '.gmdate('D, d M Y H:i:s').' GMT'); // always modified
+header ('Cache-Control: cache, must-revalidate'); // HTTP/1.1
+header ('Pragma: public'); // HTTP/1.0
+$objWriter->save('php://output');
+exit;
 
