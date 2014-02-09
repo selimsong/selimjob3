@@ -36,14 +36,26 @@ foreach($user as $r => $dataRow) {
 	$row = $baseRow + $r;
 	$objPHPExcel->getActiveSheet()->insertNewRowBefore($row,1);
 
+	$objPHPExcel->getActiveSheet()->getStyle('A')->getFont()->getColor()->applyFromArray(array('rgb' => 'red'))
+	                              ->getStyle('B')->getFont()->getColor()->applyFromArray(array('rgb' => 'red'))
+	                              ->getStyle('C')->getFont()->getColor()->applyFromArray(array('rgb' => 'red'))
+	                              ->getStyle('D')->getFont()->getColor()->applyFromArray(array('rgb' => 'red'))
+	                              ->getStyle('E')->getFont()->getColor()->applyFromArray(array('rgb' => 'red'))
+	                              ->getStyle('F')->getFont()->getColor()->applyFromArray(array('rgb' => 'red'))
+	                              ->getStyle('G')->getFont()->getColor()->applyFromArray(array('rgb' => 'red'))
+	                              ->getStyle('H')->getFont()->getColor()->applyFromArray(array('rgb' => 'red'));
+	
 	$objPHPExcel->getActiveSheet()->setCellValue('A'.$row, $r+1)
-	                              ->setCellValue('B'.$row, $dataRow['name'])
-	                              ->setCellValue('C'.$row, $winT)
-	                              ->setCellValue('D'.$row, $dataRow['phone'])
-	                              ->setCellValue('E'.$row, $dataRow['email'])
-	                              ->setCellValue('F'.$row, $dataRow['address'])
-	                              ->setCellValue('G'.$row, date("Y-m-d H:i:s",$dataRow['createtime']))
-	                              ->setCellValue('H'.$row, $dataRow['ipaddress']);
+								  ->setCellValue('B'.$row, $dataRow['name'])
+								  ->setCellValue('C'.$row, $winT)
+								  ->setCellValue('D'.$row, $dataRow['phone'])
+								  ->setCellValue('E'.$row, $dataRow['email'])
+								  ->setCellValue('F'.$row, $dataRow['address'])
+								  ->setCellValue('G'.$row, date("Y-m-d H:i:s",$dataRow['createtime']))
+								  ->setCellValue('H'.$row, $dataRow['ipaddress']);
+	
+
+
 }
 
 $objPHPExcel->getActiveSheet()->removeRow($baseRow-1,1);
