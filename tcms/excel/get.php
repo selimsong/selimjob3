@@ -33,10 +33,10 @@ foreach($user as $r => $dataRow) {
 	$objPHPExcel->getActiveSheet()->insertNewRowBefore($row,1);
 
 	$objPHPExcel->getActiveSheet()->setCellValue('A'.$row, $r+1)
-	                              ->setCellValue('B'.$row, $value['name'])
-	                              ->setCellValue('C'.$row, $value['name'])
-	                              ->setCellValue('D'.$row, $value['phone'])
-	                              ->setCellValue('E'.$row, $value['email']);
+	                              ->setCellValue('B'.$row, $dataRow['name'])
+	                              ->setCellValue('C'.$row, $dataRow['name'])
+	                              ->setCellValue('D'.$row, $dataRow['phone'])
+	                              ->setCellValue('E'.$row, $dataRow['email']);
 }
 
 $objPHPExcel->getActiveSheet()->removeRow($baseRow-1,1);
