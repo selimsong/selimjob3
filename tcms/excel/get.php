@@ -28,7 +28,21 @@ foreach($user as $r => $dataRow) {
 	$type = substr(base64_decode($dataRow['wintype']), 0,3);
 	$row = $baseRow + $r;
 	$objPHPExcel->getActiveSheet()->insertNewRowBefore($row,1);
-	$yStyle = array('fill' => array(
+	$yStyle = array('borders' => array(
+        'bottom' => array(
+            'style' => PHPExcel_Style_Border::BORDER_THIN,
+            'color' => array(
+                'rgb' => 'c0c0c0'
+            )
+        ),
+        'right' => array(
+            'style' => PHPExcel_Style_Border::BORDER_THIN,
+            'color' => array(
+                'rgb' => 'c0c0c0'
+            )
+        )
+    ),
+			'fill' => array(
 			'type' => PHPExcel_Style_Fill::FILL_SOLID,
 			'startcolor' => array(
 					'rgb' => 'ffffff',
@@ -43,13 +57,13 @@ foreach($user as $r => $dataRow) {
         'bottom' => array(
             'style' => PHPExcel_Style_Border::BORDER_THIN,
             'color' => array(
-                'rgb' => '000000'
+                'rgb' => 'c0c0c0'
             )
         ),
         'right' => array(
             'style' => PHPExcel_Style_Border::BORDER_THIN,
             'color' => array(
-                'rgb' => '000000'
+                'rgb' => 'c0c0c0'
             )
         )
     ),
