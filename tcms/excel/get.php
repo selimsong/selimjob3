@@ -66,6 +66,12 @@ foreach($user as $r => $dataRow) {
 	//$objPHPExcel->getActiveSheet()->getStyle('A'.$row.':H'.$row)->applyFromArray($yStyle);
 	$objPHPExcel->getActiveSheet()->getStyle('A'.$row)->applyFromArray($yStyle);
 	$objPHPExcel->getActiveSheet()->getStyle('B'.$row)->applyFromArray($yStyle);
+	$objPHPExcel->getActiveSheet()->getStyle('C'.$row)->applyFromArray($yStyle);
+	$objPHPExcel->getActiveSheet()->getStyle('D'.$row)->applyFromArray($yStyle);
+	$objPHPExcel->getActiveSheet()->getStyle('E'.$row)->applyFromArray($yStyle);
+	$objPHPExcel->getActiveSheet()->getStyle('F'.$row)->applyFromArray($yStyle);
+	$objPHPExcel->getActiveSheet()->getStyle('G'.$row)->applyFromArray($yStyle);
+	$objPHPExcel->getActiveSheet()->getStyle('H'.$row)->applyFromArray($yStyle);
 	
 	
 	$objPHPExcel->getActiveSheet()->setCellValue('A'.$row, $r+1)
