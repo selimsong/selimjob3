@@ -28,7 +28,7 @@ mysql_close($con);
 $objPHPExcel->getActiveSheet()->setCellValue('D1', PHPExcel_Shared_Date::PHPToExcel(time()));
 
 $baseRow = 5;
-foreach($data as $r => $dataRow) {
+foreach($user as $r => $dataRow) {
 	$row = $baseRow + $r;
 	$objPHPExcel->getActiveSheet()->insertNewRowBefore($row,1);
 
