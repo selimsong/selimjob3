@@ -42,8 +42,10 @@ foreach($user as $r => $dataRow) {
 				'startcolor' => array(
 						'rgb' => 'FFDD00',
 				)));
+		$objPHPExcel->getActiveSheet()->getStyle('A'.$row.':H'.$row)->getStartColor()->setRGB('FFDD00');
 	}
-	$objPHPExcel->getActiveSheet()->getStyle('A'.$row.':H'.$row)->applyFromArray($yStyle);
+	
+	//$objPHPExcel->getActiveSheet()->getStyle('A'.$row.':H'.$row)->applyFromArray($yStyle);
 	$objPHPExcel->getActiveSheet()->setCellValue('A'.$row, $r+1)
 								  ->setCellValue('B'.$row, $dataRow['name'])
 								  ->setCellValue('C'.$row, $winT)
