@@ -38,16 +38,33 @@ foreach($user as $r => $dataRow) {
 		$objPHPExcel->getActiveSheet()->getStyle('A'.$row.':H'.$row)->getFill()->setFillType(PHPExcel_Style_Fill::BORDER_THIN);
 	}elseif ('wib' == $type){
 		$winT ='T';
-		$yStyle = array('fill' => array(
-				'type' => PHPExcel_Style_Fill::FILL_SOLID,
-				'startcolor' => array(
-						'rgb' => 'FFDD00',
-				)));
-	$objPHPExcel->getActiveSheet()->getStyle('A'.$row.':H'.$row)->getFill()->setFillType(PHPExcel_Style_Fill::FILL_SOLID);
-	$objPHPExcel->getActiveSheet()->getStyle('A'.$row.':H'.$row)->getFill()->getStartColor()->setRGB('FFDD00');
+		$yStyle = array(
+    'borders' => array(
+        'bottom' => array(
+            'style' => PHPExcel_Style_Border::BORDER_THIN,
+            'color' => array(
+                'rgb' => '000000'
+            )
+        ),
+        'right' => array(
+            'style' => PHPExcel_Style_Border::BORDER_THIN,
+            'color' => array(
+                'rgb' => '000000'
+            )
+        )
+    ),
+    'fill' => array(
+        'type' => PHPExcel_Style_Fill::FILL_SOLID,
+        'startcolor' => array(
+            'rgb' => 'FFDD00',
+        ),
+    ),
+);
+	//$objPHPExcel->getActiveSheet()->getStyle('A'.$row.':H'.$row)->getFill()->setFillType(PHPExcel_Style_Fill::FILL_SOLID);
+	//$objPHPExcel->getActiveSheet()->getStyle('A'.$row.':H'.$row)->getFill()->getStartColor()->setRGB('FFDD00');
 	}
 	
-	//$objPHPExcel->getActiveSheet()->getStyle('A'.$row.':H'.$row)->applyFromArray($yStyle);
+	$objPHPExcel->getActiveSheet()->getStyle('A'.$row.':H'.$row)->applyFromArray($yStyle);
 	$objPHPExcel->getActiveSheet()->setCellValue('A'.$row, $r+1)
 								  ->setCellValue('B'.$row, $dataRow['name'])
 								  ->setCellValue('C'.$row, $winT)
