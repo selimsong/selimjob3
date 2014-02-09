@@ -36,12 +36,8 @@ foreach($user as $r => $dataRow) {
 	$row = $baseRow + $r;
 	$objPHPExcel->getActiveSheet()->insertNewRowBefore($row,1);
 
-	$objPHPExcel->getActiveSheet()->getStyle('A:H')->getFill()->applyFromArray(
-			array(
-					'type'       => PHPExcel_Style_Fill::FILL_SOLID,
-					'startcolor' => array('rgb' => 'E9E9E9'),
-					'endcolor'   => array('rgb' => 'E9E9E9')
-			));
+	$objPHPExcel->getActiveSheet()->getStyle('A')->getFill()->getStartColor()->setRGB('FFFF00'); 
+
 	
 	
 	
