@@ -28,13 +28,13 @@ foreach($user as $r => $dataRow) {
 	$type = substr(base64_decode($dataRow['wintype']), 0,3);
 	$row = $baseRow + $r;
 	$objPHPExcel->getActiveSheet()->insertNewRowBefore($row,1);
+	$yStyle = array('fill' => array(
+			'type' => PHPExcel_Style_Fill::FILL_SOLID,
+			'startcolor' => array(
+					'rgb' => 'ffffff',
+			)));
 	if('wia' == $type){
 		$winT ="水杯";
-		$yStyle = array('fill' => array(
-				'type' => PHPExcel_Style_Fill::FILL_SOLID,
-				'startcolor' => array(
-						'rgb' => 'ffffff',
-				)));
 	}elseif ('wib' == $type){
 		$winT ='T';
 		$yStyle = array('fill' => array(
@@ -43,7 +43,7 @@ foreach($user as $r => $dataRow) {
 						'rgb' => 'FFDD00',
 				)));
 	}
-	$objPHPExcel->getActiveSheet()->getStyle('A'.$row.':B'.$row)->applyFromArray($yStyle);
+	$objPHPExcel->getActiveSheet()->getStyle('A'.$row.':H'.$row)->applyFromArray($yStyle);
 	$objPHPExcel->getActiveSheet()->setCellValue('A'.$row, $r+1)
 								  ->setCellValue('B'.$row, $dataRow['name'])
 								  ->setCellValue('C'.$row, $winT)
