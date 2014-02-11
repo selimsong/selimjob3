@@ -18,9 +18,14 @@ while($row = mysql_fetch_array($result))
           $tshirt[] = array('name'=>utf8Substr($row['name'],0,1), 'phone' => substr($row['phone'],0,3).'***'.substr($row['phone'],-5));   
        }
 }
-
+$i=1;
+$c= count($shuibei)/2;
 foreach($shuibei as $value){
-  echo '<p class="list_jipiao"><em class="praiseNo01 dat-UserName">'.$value['name'].'*</em><em  class="praiseNo02 dat-Phone">'.$value['phone'].'</em></p>';   
+  echo '<p class="list_jipiao"><em class="praiseNo01 dat-UserName">'.$value['name'].'*</em><em  class="praiseNo02 dat-Phone">'.$value['phone'].'</em></p>';
+  if($i ==  $c){
+     echo "[<br><br><br><br>]"
+  }
+  $i++;
 }
 
 echo '获T';
