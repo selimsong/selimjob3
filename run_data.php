@@ -23,7 +23,7 @@ $c= count($shuibei)/2;
 foreach($shuibei as $value){
   echo '<p class="list_jipiao"><em class="praiseNo01 dat-UserName">'.$value['name'].'*</em><em  class="praiseNo02 dat-Phone">'.$value['phone'].'</em></p>';
   if($i ==  $c){
-     echo "[<br><br><br><br>]"
+     echo "[<br><br><br><br>]";
   }
   $i++;
 }
