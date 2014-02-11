@@ -111,9 +111,9 @@ foreach($img_array as $k => $value){
 		var cando = 'work';
 		if(typeof(Storage)!=="undefined")
             {
-			  var currentUserdate = "<?php echo date("D");  ?>";
+			  var currentUserdate = "<?php echo date("d");  ?>";
 			  if(localStorage.userdate == null){
-			     localStorage.userdate = "<?php echo date("D");  ?>";
+			     localStorage.userdate = "<?php echo date("d");  ?>";
 			  }
 			  if(currentUserdate != localStorage.userdate){  
 				  localStorage.clear();
