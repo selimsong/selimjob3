@@ -19,7 +19,7 @@ while($row = mysql_fetch_array($result))
        }
 }
 $i=1;
-$c= count($shuibei)/2;
+$c= round(count($shuibei)/2);
 foreach($shuibei as $value){
   echo '<p class="list_jipiao"><em class="praiseNo01 dat-UserName">'.$value['name'].'*</em><em  class="praiseNo02 dat-Phone">'.$value['phone'].'</em></p>';
   if($i ==  $c){
