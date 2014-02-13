@@ -19,20 +19,30 @@ while($row = mysql_fetch_array($result))
        }
 }
 $i=1;
-$c= round(count($shuibei)/2);
+$c= ceil(count($shuibei)/2);
+$content_a = NULL;
+$content_b = NULL;
 foreach($shuibei as $value){
-  echo '<p class="list_jipiao"><em class="praiseNo01 dat-UserName">'.$value['name'].'*</em><em  class="praiseNo02 dat-Phone">'.$value['phone'].'</em></p>';
-  if($i ==  $c){
-     echo "[<br><br><br><br>]";
+  if($i<=$c){
+     $content_a.='<p class="list_jipiao"><em class="praiseNo01 dat-UserName">'.$value['name'].'*</em><em  class="praiseNo02 dat-Phone">'.$value['phone'].'</em></p>';
+  }else{
+     $content_b.='<p class="list_jipiao"><em class="praiseNo01 dat-UserName">'.$value['name'].'*</em><em  class="praiseNo02 dat-Phone">'.$value['phone'].'</em></p>';
   }
   $i++;
 }
+
+if(0 != count($shuibei)%2){
+  $content_b.='<p class="list_jipiao"><em class="praiseNo01 dat-UserName"> </em><em  class="praiseNo02 dat-Phone"> </em></p>';
+}
+
+file_put_contents('left.htm', $content_a);
+file_put_contents('right.htm', $content_b);
 
 echo '获T';
 echo "<br />br />br />";
 
 foreach($tshirt as $value){
-  echo '<p class="list_jipiao"><em class="praiseNo01 dat-UserName">'.$value['name'].'*</em><em  class="praiseNo02 dat-Phone">'.$value['phone'].'</em></p>';   
+ // echo '<p class="list_jipiao"><em class="praiseNo01 dat-UserName">'.$value['name'].'*</em><em  class="praiseNo02 dat-Phone">'.$value['phone'].'</em></p>';   
 }
 
 
