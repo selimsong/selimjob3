@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once('jiang.php');
 $con = mysql_connect("localhost","root","blabla1234");
 mysql_select_db("scra", $con);
@@ -34,3 +35,5 @@ VALUES ('".$_POST['name']."', '".$_POST['phone']."', '".$_POST['email']."', '".$
 '".$ip."', ".date(d).", ".time().")")or die(mysql_error());
 
 mysql_close($con);
+
+$_SESSION['win_key']=1;
