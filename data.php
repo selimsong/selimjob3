@@ -15,7 +15,7 @@ $tfile = './jiang/t.txt';
 $date = date('d');
 $type = substr(base64_decode($_POST['wkey']), 0,3);
 if('wia' == $type){
-	 for($i=1; $i<=$shuibei[$date]; $i++){
+	 for($i=1; $i<=4; $i++){
 	    $file = './jiang/'.$i."shui.txt";
 		if(file_exists($file)){
 		  unlink($file);
