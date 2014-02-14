@@ -102,6 +102,7 @@ $(".tijaio02").click(function () {
 	   $.post( "data.php", { name: $(".name").val(), phone: $(".tel").val(), email: $(".email").val(), address: $(".address").val(), wkey: key, uid: uid  })
 		 .done(function( data ) {
 			say = 'unwork';
+			key = 1;
 			   alert("您的个人信息已经提交成功了");
 	   });
 	}
