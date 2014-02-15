@@ -1,7 +1,7 @@
 <?php
 $shirt   =1;
 //$tfile = './jiang/t.txt';
-$randA = rand(1, 600);
+$randA = rand(1, 500);
 $rate = 3;
 if($randA> 21 && $randA<40 ){
 for($i=1; $i<=4; $i++){
