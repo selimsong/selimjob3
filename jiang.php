@@ -1,9 +1,9 @@
 <?php
 $shirt   =1;
 //$tfile = './jiang/t.txt';
-$randA = rand(1, 500);
+$randA = rand(1, 600);
 $rate = 3;
-if($randA> 21 && $randA<40 ){
+if($randA> 21 && $randA<30){
 for($i=1; $i<=4; $i++){
 	$file = './jiang/'.$i."shui.txt";
 	if(file_exists($file)){
