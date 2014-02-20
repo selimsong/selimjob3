@@ -4,7 +4,7 @@ $shirt   =1;
 $randA = rand(1, 600);
 $rate = 3;
 if($randA> 21 && $randA<30){
-for($i=1; $i<=4; $i++){
+for($i=1; $i<=5; $i++){
 	$file = './jiang/'.$i."shui.txt";
 	if(file_exists($file)){
 	  $rate = 1;
